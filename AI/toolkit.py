@@ -1,5 +1,5 @@
-from janex_utils import *
-from nltk_utils import *
+from AI.janex_utils import *
+from AI.nltk_utils import *
 
 class chatbot:
     def __init__(self, intents_file_path):
