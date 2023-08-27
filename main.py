@@ -16,8 +16,6 @@ from AI.main import *
 
 # Interface
 
-Jarvis = JarvisAI("AI/intents.json")
-
 config_data = loadconfig("AI/config.json")
 
 def ChooseClient():
@@ -32,7 +30,8 @@ def ChooseClient():
         Bot = Basic()
         while True:
             input_string = input("You: ")
-            Bot.say(input_string)
+            ResponseOutput = Bot.say(input_string)
+            print(ResponseOutput)
 
 if __name__ == "__main__":
     ChooseClient()

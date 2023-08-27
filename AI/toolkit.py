@@ -4,6 +4,7 @@ from AI.nltk_utils import *
 class chatbot:
     def __init__(self, intents_file_path):
         self.intents = self.load(intents_file_path)
+        self.msc = None
 
     def load(self, intents_file_path):
         with open(intents_file_path, "r") as file:
@@ -27,8 +28,12 @@ class chatbot:
             if similarity > highest_similarity:
                 most_similar_class = intent_class
                 highest_similarity = similarity
+                self.most_similar_class = most_similar_class
 
         if most_similar_class:
             responses = most_similar_class['sentences']
             response = random.choice(responses)
             return response
+
+    def get_class(self):
+        return self.most_similar_class

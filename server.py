@@ -3,6 +3,8 @@ from io import BytesIO
 import json
 from main import *
 
+Jarvis = JarvisAI("AI/intents.json")
+
 class RequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         # get the content length of the post request
@@ -24,6 +26,8 @@ class RequestHandler(BaseHTTPRequestHandler):
         sentence = str(message_text)
 
         ResponseOutput = Jarvis.say(sentence)
+        intent_class = Jarvis.get_class()
+        DoFunction(intent_class)
 
         response_bytes = ResponseOutput.encode('utf-8')
 

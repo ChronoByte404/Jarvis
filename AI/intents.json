@@ -48,6 +48,30 @@
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
         "What did the buffalo say when his son left for college? Bison."
       ]
+    },
+    {
+      "tag": "open-google",
+      "sentences": ["Open Google", "Go to Google", "Launch Google"]
+    },
+    {
+      "tag": "open-amazon",
+      "sentences": ["Open Amazon", "Go to Amazon", "Launch Amazon"]
+    },
+    {
+      "tag": "open-youtube",
+      "sentences": ["Open YouTube", "Go to YouTube", "Launch YouTube"]
+    },
+    {
+      "tag": "open-openai",
+      "sentences": ["Open OpenAI", "Go to OpenAI", "Launch OpenAI"]
+    },
+    {
+      "tag": "open-amazon-music",
+      "sentences": ["Open Amazon Music", "Go to Amazon Music", "Launch Amazon Music"]
+    },
+    {
+      "tag": "open-twitter",
+      "sentences": ["Open Twitter", "Go to Twitter", "Launch Twitter"]
     }
   ]
 }

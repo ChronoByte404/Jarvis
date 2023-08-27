@@ -12,6 +12,6 @@ class Basic:
             headers = {"Content-type": "application/json"}
             fullresponse = requests.post(self.url, data=message_json, headers=headers)
             ResponseOutput = fullresponse.text
-            print(ResponseOutput)
+            return ResponseOutput
         except:
             print("No response found.")

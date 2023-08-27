@@ -7,3 +7,7 @@ class JarvisAI:
     def say(self, input_string):
         response = self.ChatBot.say(input_string)
         return response
+
+    def get_class(self):
+        intent_class = self.ChatBot.get_class()
+        return intent_class
