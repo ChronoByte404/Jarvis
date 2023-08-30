@@ -22,27 +22,6 @@
       "sentences": ["Happy to help!", "Any time!", "My pleasure"]
     },
     {
-      "tag": "items",
-      "sentences": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
-    },
-    {
-      "tag": "payments",
-      "sentences": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
-    },
-    {
-      "tag": "delivery",
-      "sentences": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
       "tag": "funny",
       "sentences": [
         "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
@@ -95,6 +74,22 @@
     },
     {"tag": "how_bad_reply",
     "sentences": ["aw, dang. Hope it gets better soon"]
-    }
+  },
+  {
+    "tag": "pause-music",
+    "sentences": ["Pause music", "Stop music", "Pausing music", "Stopping the music", "pause music", "cutting music", "kill music"]
+  },
+  {
+    "tag": "play-music",
+    "sentences": ["play music", "resume music", "music resumed", "music playing", "playing music", "resuming music"]
+  },
+  {
+    "tag": "next-song",
+    "sentences": ["playing the next song", "play next song", "skip song", "skipping song"]
+  },
+  {
+    "tag": "previous-song",
+    "sentences": ["reverse the song", "previous song", "replay song"]
+  }
   ]
 }

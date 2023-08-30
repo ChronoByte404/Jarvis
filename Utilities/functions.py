@@ -12,12 +12,16 @@ def loadconfig(config_file_path):
 
 def check_os():
     if sys.platform.startswith('linux'):
+        print(f"Linux-based Operating System Detected.")
         return "Linux"
     elif sys.platform.startswith('darwin'):
+        print(f"Caution: MacOS-based Operating System detected.")
         return "MacOS"
     elif sys.platform.startswith('win'):
+        print(f"Caution: MS-DOS-based Operating System detected.")
         return "Windows"
     else:
+        print(f"Caution: Unknown Operating System detected: {sys.platform}")
         return "Unknown"
 
 def DoFunction(intent_class):
@@ -42,7 +46,9 @@ def DoFunction(intent_class):
         open_atom()
     elif intent_class == "document":
         open_libreoffice()
-    elif intent_class == "play-pause-music":
+    elif intent_class == "play-music":
+        play_pause_music()
+    elif intent_class == "pause-music":
         play_pause_music()
     elif intent_class == "next-music":
         next_music()

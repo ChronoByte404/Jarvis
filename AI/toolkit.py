@@ -32,10 +32,9 @@ class chatbot:
                 self.most_similar_class = most_similar_class
 
         if most_similar_class:
-            if highest_similarity > 0.6:
-                responses = most_similar_class['sentences']
-                response = random.choice(responses)
-                return response
+            responses = most_similar_class['sentences']
+            response = random.choice(responses)
+            return response
 
     def get_class(self):
         return self.most_similar_class
