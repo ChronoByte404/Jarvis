@@ -26,6 +26,7 @@ def check_os():
 
 def DoFunction(intent_class):
     intent_class = intent_class.get("tag")
+    print(intent_class)
     if intent_class == "open-google":
         open_google()
     elif intent_class == "open-amazon":

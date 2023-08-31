@@ -1,0 +1,54 @@
+{
+  "intents": [
+    {
+      "tag": "open-google",
+      "patterns": ["Open Google", "Go to Google", "Launch Google"],
+      "responses": [""]
+    },
+    {
+      "tag": "open-amazon",
+      "patterns": ["Open Amazon", "Go to Amazon", "Launch Amazon"],
+      "responses": [""]
+    },
+    {
+      "tag": "open-youtube",
+      "patterns": ["Open YouTube", "Go to YouTube", "Launch YouTube"],
+      "responses": [""]
+    },
+    {
+      "tag": "open-openai",
+      "patterns": ["Open OpenAI", "Go to OpenAI", "Launch OpenAI"],
+      "responses": [""]
+    },
+    {
+      "tag": "open-amazon-music",
+      "patterns": ["Open Amazon Music", "Go to Amazon Music", "Launch Amazon Music"],
+      "responses": [""]
+    },
+    {
+      "tag": "open-twitter",
+      "patterns": ["Open Twitter", "Go to Twitter", "Launch Twitter"],
+      "responses": [""]
+    },
+  {
+    "tag": "pause-music",
+    "patterns": ["Pause music", "Stop music", "Pausing music", "Stopping the music", "pause music", "cutting music", "kill music"],
+    "responses": [""]
+  },
+  {
+    "tag": "play-music",
+    "patterns": ["play music", "resume music", "music resumed", "music playing", "playing music", "resuming music"],
+    "responses": [""]
+  },
+  {
+    "tag": "next-song",
+    "patterns": ["playing the next song", "play next song", "skip song", "skipping song"],
+    "responses": [""]
+  },
+  {
+    "tag": "previous-song",
+    "patterns": ["reverse the song", "previous song", "replay song"],
+    "responses": [""]
+  }
+  ]
+}

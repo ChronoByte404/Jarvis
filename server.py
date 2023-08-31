@@ -26,6 +26,8 @@ class RequestHandler(BaseHTTPRequestHandler):
         sentence = str(message_text)
 
         ResponseOutput = Jarvis.say(sentence)
+        #intent_class = Jarvis.get_class()
+        #DoFunction(intent_class)
 
         response_bytes = ResponseOutput.encode('utf-8')
 

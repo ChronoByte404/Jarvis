@@ -10,18 +10,22 @@ class DiscordBot:
         self.discordintents = discord.Intents.all()
         self.client = discord.Client(intents=self.discordintents)
         self.Basic = Basic()
+        self.authorised_servers = ["A.R.U. Computing", "Depression & Anxiety", "Depression and Anxiety"]
 
     def activate_bot(self):
         @self.client.event
         async def on_message(message):
-            sentence = str(message.content)
-            if message.author == self.client.user:
-                return
-            UIName = "Jarvis"
-            if UIName in sentence:
-                sentence = str(sentence)
-                ResponseOutput = self.Basic.say(sentence)
-                await message.reply(ResponseOutput)
+            if message.guild is None or message.guild.name in self.authorised_servers:
+                sentence = str(message.content)
+                if message.author == self.client.user:
+                    return
+                UIName = "Jarvis"
+                if UIName in sentence:
+                    sentence = str(sentence)
+                    ResponseOutput = self.Basic.say(sentence)
+                    await message.reply(ResponseOutput)
+                else:
+                    pass
             else:
                 pass
 
