@@ -3,7 +3,7 @@ from io import BytesIO
 import json
 from main import *
 
-Jarvis = JarvisAI("AI/intents.json")
+Jarvis = JarvisAI()
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):
@@ -26,8 +26,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         sentence = str(message_text)
 
         ResponseOutput = Jarvis.say(sentence)
-        intent_class = Jarvis.get_class()
-        DoFunction(intent_class)
 
         response_bytes = ResponseOutput.encode('utf-8')
 
