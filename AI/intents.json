@@ -49,6 +49,41 @@
     "tag": "previous-song",
     "patterns": ["reverse the song", "previous song", "replay song"],
     "responses": [""]
-  }
+  },
+  {
+      "tag": "greet",
+      "patterns": ["Hi", "Hello", "Hey", "Greetings"],
+      "responses": ["Hello!", "Hi there!", "Hey!", "Greetings!"]
+    },
+    {
+      "tag": "how-are-you",
+      "patterns": ["How are you?", "How's it going?", "What's up?"],
+      "responses": ["I'm good, thanks for asking!", "I'm doing well, how about you?", "Not bad, how about yourself?"]
+    },
+    {
+      "tag": "thank-you",
+      "patterns": ["Thank you", "Thanks", "Appreciate it"],
+      "responses": ["You're welcome!", "No problem!", "You got it!"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Goodbye", "See you later", "Bye", "Farewell"],
+      "responses": ["Goodbye!", "See you later!", "Bye!", "Take care!"]
+    },
+    {
+      "tag": "weather",
+      "patterns": ["What's the weather like today?", "Tell me the weather forecast", "Is it going to rain?"],
+      "responses": ["I'm not sure about the current weather, you might want to check a weather website or app for that.", "I don't have real-time weather information, but you can check a weather service for the latest updates."]
+    },
+    {
+      "tag": "weekend-plans",
+      "patterns": ["Any plans for the weekend?", "What are you doing this weekend?", "Got any fun weekend activities?"],
+      "responses": ["I'm just here to chat, but I hope you have a great weekend planned!", "No plans for me, but I hope you enjoy your weekend!"]
+    },
+    {
+      "tag": "movie-recommendation",
+      "patterns": ["Can you recommend a good movie?", "What's a popular movie to watch?", "Any movie suggestions?"],
+      "responses": ["Sure! How about watching [Movie Title] or [Another Movie Title]? They're both highly rated.", "I heard [Movie Title] is really good, you might enjoy that one."]
+    }
   ]
 }

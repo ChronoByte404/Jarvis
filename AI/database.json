@@ -418,7 +418,8 @@
             ],
             "answers": [
                 "It aired on the 23rd of November, 1963.",
-                "ok"
+                "ok",
+                "SHut up"
             ]
         },
         {
@@ -522,7 +523,10 @@
                 -0.017375240102410316
             ],
             "answers": [
-                "I'm actually quite good thanks. How are you?"
+                "I'm actually quite good thanks. How are you?",
+                "Hello",
+                "Hello",
+                "hi"
             ]
         },
         {
@@ -628,7 +632,8 @@
             "answers": [
                 "Great to hear.",
                 "I'm awesome, thanks",
-                "I promise"
+                "I promise",
+                "I'm actually very good, thanks."
             ]
         },
         {
@@ -733,7 +738,8 @@
             ],
             "answers": [
                 "Are you good?",
-                "That's good to hear."
+                "That's good to hear.",
+                "yes that's legitimately what i asked"
             ]
         },
         {
@@ -1045,7 +1051,8 @@
                 0.2272968292236328
             ],
             "answers": [
-                "I am a robot."
+                "I am a robot.",
+                "Yes Jarvis, I am from ARU."
             ]
         },
         {
@@ -1360,7 +1367,10 @@
             "answers": [
                 "I thought you did.",
                 "No you didn't",
-                "No, I don't. I'm not one of those fake-god worshipping weirdos."
+                "No, I don't. I'm not one of those fake-god worshipping weirdos.",
+                "no Jarvis. I will not.",
+                "There's no intelligence here.",
+                "Yes. I'm from there."
             ]
         },
         {
@@ -1568,7 +1578,9 @@
                 0.19667287170886993
             ],
             "answers": [
-                "What is god to you?"
+                "What is god to you?",
+                "No you're not.",
+                "Yes but not too much or they get ill"
             ]
         },
         {
@@ -1778,6 +1790,13 @@
             "answers": [
                 "I like to imagine it is.",
                 "Great",
+                "Good",
+                "Good.",
+                "Okay awesome.",
+                "Good",
+                "Good",
+                "right",
+                "right.",
                 "Good"
             ]
         },
@@ -1987,7 +2006,8 @@
                 0.3506793677806854
             ],
             "answers": [
-                "No, I am not."
+                "No, I am not.",
+                "Of course I don't. He's an absolute dick."
             ]
         },
         {
@@ -2196,7 +2216,8 @@
             ],
             "answers": [
                 "Do you want to have a body?",
-                "Jarvis don't be a bitch"
+                "Jarvis don't be a bitch",
+                "Of course"
             ]
         },
         {
@@ -2301,7 +2322,9 @@
             ],
             "answers": [
                 "Au revoir.",
-                "Yes"
+                "Yes",
+                "Yes",
+                "Okay"
             ]
         },
         {
@@ -2405,7 +2428,8 @@
                 0.2977335453033447
             ],
             "answers": [
-                "Doctors are not required."
+                "Doctors are not required.",
+                "I am not a christian. Fuck god."
             ]
         },
         {
@@ -2717,7 +2741,8 @@
                 -0.09921632707118988
             ],
             "answers": [
-                "The largest planet in our solar system is Jupiter."
+                "The largest planet in our solar system is Jupiter.",
+                "He's a cool dude Jarvis"
             ]
         },
         {
@@ -2821,7 +2846,9 @@
                 0.7764140367507935
             ],
             "answers": [
-                "It ended on the 2nd of September, 1945."
+                "It ended on the 2nd of September, 1945.",
+                "1963",
+                "1945"
             ]
         },
         {
@@ -3237,7 +3264,8 @@
                 0.36107248067855835
             ],
             "answers": [
-                "Japanese inhabitants use the Japanese Yen currency."
+                "Japanese inhabitants use the Japanese Yen currency.",
+                "Jarvis why tf is India losing today \ud83d\ude11 \ud83d\ude12"
             ]
         },
         {
@@ -3343,7 +3371,8 @@
             "answers": [
                 "I promise!",
                 "I'd like to imagine it is!",
-                "stop"
+                "stop",
+                "Jarvis, sing Never gonna give you up"
             ]
         },
         {
@@ -3871,7 +3900,16 @@
                 "okay Jarvis",
                 "cheers Jarvis",
                 "hey Jarvis",
-                "hey Jarvis"
+                "hey Jarvis",
+                "hi Jarvis",
+                "hello Jarvis",
+                "Jarvis, Do the shava shava",
+                "open amazon",
+                "open amazon",
+                "open  bbc iplayer",
+                "open google",
+                "open amazon music",
+                "open BBC iPlayer"
             ]
         },
         {
@@ -4079,7 +4117,10 @@
                 0.6457467675209045
             ],
             "answers": [
-                "Opening YouTube."
+                "Opening YouTube.",
+                "Thanks.",
+                "thanks",
+                "thanks"
             ]
         },
         {
@@ -4184,7 +4225,9 @@
             ],
             "answers": [
                 "I'm not clever enough to turn evil",
-                "ask me something Jarvis"
+                "ask me something Jarvis",
+                "dunno",
+                "Kill yourself Jarvis"
             ]
         },
         {
@@ -4704,7 +4747,8 @@
                 0.5742741227149963
             ],
             "answers": [
-                "Only occasionally, otherwise they may get ill."
+                "Only occasionally, otherwise they may get ill.",
+                "Jarvis yo momma so fat, it makes the earth look fat \ud83d\ude02"
             ]
         },
         {
@@ -5120,7 +5164,9 @@
                 -0.025113999843597412
             ],
             "answers": [
-                "Okay! Playing music now."
+                "Okay! Playing music now.",
+                "play the music",
+                "play music"
             ]
         },
         {
@@ -5537,7 +5583,8 @@
                 0.20307178795337677
             ],
             "answers": [
-                "Yes, I'm an AI."
+                "Yes, I'm an AI.",
+                "Wasn't the question Jarvis"
             ]
         },
         {
@@ -5641,7 +5688,10 @@
                 0.5664475560188293
             ],
             "answers": [
-                "I wasn't created there, but I host the ARU computing discord."
+                "I wasn't created there, but I host the ARU computing discord.",
+                "Jarvis, it is Jupiter. I looked it up rn.",
+                "It ended in 1945.",
+                "Yes. I am from ARU."
             ]
         },
         {
@@ -5953,7 +6003,8 @@
                 0.2983027398586273
             ],
             "answers": [
-                "Maybe."
+                "Maybe.",
+                "I'd like to imagine it is."
             ]
         },
         {
@@ -6161,7 +6212,8 @@
                 0.5726814270019531
             ],
             "answers": [
-                "Do I fuck."
+                "Do I fuck.",
+                "hello"
             ]
         }
     ]

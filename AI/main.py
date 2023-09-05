@@ -1,13 +1,11 @@
 from JanexBot import *
 from Janex import *
+from JanexPT import *
 
 class JarvisAI:
     def __init__(self):
         self.chatbot = JanexBot("AI/database.json", "en_core_web_sm")
-        self.classifier = IntentClassifier()
-        self.classifier.set_intentsfp("AI/intents.json")
-        self.classifier.set_vectorsfp("AI/vectors.json")
-        self.classifier.set_dimensions(10)
+        self.classifier = JanexPT("AI/intents.json")
         self.previous_input = None
 
     def say(self, input_string):
@@ -22,10 +20,7 @@ class JarvisAI:
             self.chatbot.save_answer(answer)
             return question
 
-    def train_intents(self):
-        self.classifier.train_vectors()
-
     def get_class(self):
         input_string = self.previous_input
-        intent_class = self.classifier.classify(input_string)
+        intent_class = self.classifier.pattern_compare(input_string)
         return intent_class

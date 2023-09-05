@@ -26,13 +26,21 @@ class RequestHandler(BaseHTTPRequestHandler):
         sentence = str(message_text)
 
         ResponseOutput = Jarvis.say(sentence)
-        #intent_class = Jarvis.get_class()
-        #DoFunction(intent_class)
+        intent_class = Jarvis.get_class()
 
-        response_bytes = ResponseOutput.encode('utf-8')
+        # Create a response JSON object
+        response_data = {
+            'response': ResponseOutput,
+            'intent_class': intent_class
+        }
+
+        # Convert the response JSON object to a JSON string
+        response_json = json.dumps(response_data)
+
+        response_bytes = response_json.encode('utf-8')
 
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
+        self.send_header('Content-type', 'application/json')  # Set content type to JSON
         self.send_header('Content-length', len(response_bytes))
         self.end_headers()
 
