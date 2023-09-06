@@ -9,6 +9,7 @@ from Interfaces.discord import *
 from Interfaces.whisper import *
 from Interfaces.gui import *
 from Interfaces.basic import *
+from Interfaces.terminal import *
 
 # AI Core
 
@@ -27,7 +28,7 @@ def ChooseClient():
         Bot = DiscordBot(DiscordAPI)
         Bot.activate_bot()
     elif "basic" in ClientOption:
-        Bot = Basic()
+        Bot = terminal_chat()
         while True:
             input_string = input("You: ")
             ResponseOutput = Bot.say(input_string)
