@@ -10,6 +10,10 @@ def loadconfig(config_file_path):
         config_data = json.load(json_file)
         return config_data
 
+def saveconfig(file_path, dict):
+    with open(file_path, 'w') as json_file:
+        json.dump(dict, json_file, indent=4)
+
 def check_os():
     if sys.platform.startswith('linux'):
         print(f"Linux-based Operating System Detected.")
@@ -55,33 +59,43 @@ def DoFunction(intent_class):
         next_music()
     elif intent_class == "previous-music":
         previous_music()
+    elif intent_class == "change-response-type":
+        change_response_setting()
 
 OS = check_os()
 # Website functions
 
+def change_response_setting():
+    settings_config = loadconfig("./Settings/configuration.json")
+    if settings_config.get("response-type") == "random":
+        settings_config["response-type"] = "fixed"
+    else:
+        settings_config["response-type"] = "random"
+    saveconfig("./Settings/configuration.json", settings_config)
+
 def open_google():
-    webbrowser.open("https://www.google.com")
+    webbrowser.open("https://www.google.co.uk")
 
 def open_amazon():
-    webbrowser.open("https://www.amazon.com")
+    webbrowser.open("https://www.amazon.co.uk")
 
 def open_youtube():
-    webbrowser.open("https://www.youtube.com")
+    webbrowser.open("https://www.youtube.co.uk")
 
 def open_openai():
-    webbrowser.open("https://chat.openai.com")
+    webbrowser.open("https://chat.openai.co.uk")
 
 def open_amazon_music():
-    webbrowser.open("https://music.amazon.com")
+    webbrowser.open("https://music.amazon.co.uk")
 
 def open_twitter():
-    webbrowser.open("https://www.twitter.com")
+    webbrowser.open("https://www.twitter.co.uk")
 
 def open_iplayer():
     webbrowser.open("https://www.bbc.co.uk/iplayer")
 
 def open_disney_plus():
-    webbrowser.open("https://www.disneyplus.com/en-gb/select-profile")
+    webbrowser.open("https://www.disneyplus.co.uk/en-gb/select-profile")
 
 def open_atom():
     os.system("atom-dev")

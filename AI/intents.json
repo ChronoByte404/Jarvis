@@ -3,54 +3,54 @@
     {
       "tag": "open-google",
       "patterns": ["Open Google", "Go to Google", "Launch Google"],
-      "responses": [""]
+      "responses": ["Opening Google...", "Navigating to Google.", "Google is now open."]
     },
     {
       "tag": "open-amazon",
       "patterns": ["Open Amazon", "Go to Amazon", "Launch Amazon"],
-      "responses": [""]
+      "responses": ["Opening Amazon...", "Navigating to Amazon.", "Amazon is now open."]
     },
     {
       "tag": "open-youtube",
       "patterns": ["Open YouTube", "Go to YouTube", "Launch YouTube"],
-      "responses": [""]
+      "responses": ["Opening YouTube...", "Navigating to YouTube.", "YouTube is now open."]
     },
     {
       "tag": "open-openai",
       "patterns": ["Open OpenAI", "Go to OpenAI", "Launch OpenAI"],
-      "responses": [""]
+      "responses": ["Opening OpenAI...", "Navigating to OpenAI.", "OpenAI is now open."]
     },
     {
       "tag": "open-amazon-music",
       "patterns": ["Open Amazon Music", "Go to Amazon Music", "Launch Amazon Music"],
-      "responses": [""]
+      "responses": ["Opening Amazon Music...", "Navigating to Amazon Music.", "Amazon Music is now open."]
     },
     {
       "tag": "open-twitter",
       "patterns": ["Open Twitter", "Go to Twitter", "Launch Twitter"],
-      "responses": [""]
+      "responses": ["Opening Twitter...", "Navigating to Twitter.", "Twitter is now open."]
     },
-  {
-    "tag": "pause-music",
-    "patterns": ["Pause music", "Stop music", "Pausing music", "Stopping the music", "pause music", "cutting music", "kill music"],
-    "responses": [""]
-  },
-  {
-    "tag": "play-music",
-    "patterns": ["play music", "resume music", "music resumed", "music playing", "playing music", "resuming music"],
-    "responses": [""]
-  },
-  {
-    "tag": "next-song",
-    "patterns": ["playing the next song", "play next song", "skip song", "skipping song"],
-    "responses": [""]
-  },
-  {
-    "tag": "previous-song",
-    "patterns": ["reverse the song", "previous song", "replay song"],
-    "responses": [""]
-  },
-  {
+    {
+      "tag": "pause-music",
+      "patterns": ["Pause music", "Stop music", "Pausing music", "Stopping the music", "pause music", "cutting music", "kill music"],
+      "responses": ["Pausing the music...", "Stopping the music.", "Music is now paused."]
+    },
+    {
+      "tag": "play-music",
+      "patterns": ["play music", "resume music", "music resumed", "music playing", "playing music", "resuming music"],
+      "responses": ["Playing music...", "Resuming music.", "Music is now playing."]
+    },
+    {
+      "tag": "next-song",
+      "patterns": ["playing the next song", "play next song", "skip song", "skipping song"],
+      "responses": ["Playing the next song...", "Skipping to the next song.", "Next song is now playing."]
+    },
+    {
+      "tag": "previous-song",
+      "patterns": ["reverse the song", "previous song", "replay song"],
+      "responses": ["Reversing the song...", "Playing the previous song.", "Previous song is now playing."]
+    },
+    {
       "tag": "greet",
       "patterns": ["Hi", "Hello", "Hey", "Greetings"],
       "responses": ["Hello!", "Hi there!", "Hey!", "Greetings!"]
@@ -84,6 +84,11 @@
       "tag": "movie-recommendation",
       "patterns": ["Can you recommend a good movie?", "What's a popular movie to watch?", "Any movie suggestions?"],
       "responses": ["Sure! How about watching [Movie Title] or [Another Movie Title]? They're both highly rated.", "I heard [Movie Title] is really good, you might enjoy that one."]
+    },
+    {
+      "tag": "change-response-type",
+      "patterns": ["Switch response type", "change response type to fixed", "change response type to random", "enable random pattern generation", "disable random pattern generation"],
+      "responses": ["Switching..."]
     }
   ]
 }
