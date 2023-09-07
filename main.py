@@ -2,6 +2,7 @@
 
 from Utilities.libraries import *
 from Utilities.functions import *
+from Utilities.server import *
 
 # Interfaces
 
@@ -33,6 +34,11 @@ def ChooseClient():
             input_string = input("You: ")
             ResponseOutput = Bot.say(input_string)
             print(ResponseOutput)
+    elif "server" in ClientOption:
+        server_address = ('', 8000)
+        httpd = HTTPServer(server_address, RequestHandler)
+        print('8000')
+        httpd.serve_forever()
 
 if __name__ == "__main__":
     ChooseClient()
