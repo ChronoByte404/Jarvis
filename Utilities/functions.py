@@ -2,6 +2,7 @@ import json
 import os
 import sys
 import webbrowser
+import playsound
 
 # Internal functions
 
@@ -13,6 +14,12 @@ def loadconfig(config_file_path):
 def saveconfig(file_path, dict):
     with open(file_path, 'w') as json_file:
         json.dump(dict, json_file, indent=4)
+
+def play_notification_sound(sound_file_path):
+    playsound(sound_file_path)
+
+def play_sound_in_background(notification_sound_file):
+    threading.Thread(target=play_notification_sound, args=(notification_sound_file,)).start()
 
 def check_os():
     if sys.platform.startswith('linux'):

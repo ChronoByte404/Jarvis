@@ -639,7 +639,8 @@
                 "Great to hear.",
                 "I'm awesome, thanks",
                 "I promise",
-                "I'm actually very good, thanks."
+                "I'm actually very good, thanks.",
+                "i love you"
             ]
         },
         {
@@ -3935,7 +3936,10 @@
                 "Open Amazon",
                 "open YouTube",
                 "open YouTube",
-                "Amazon Music"
+                "Amazon Music",
+                "I love Wendy Williams omg",
+                "Thanks loce",
+                "Volume 10"
             ]
         },
         {
@@ -6246,7 +6250,8 @@
             "answers": [
                 "Do I fuck.",
                 "hello",
-                "hello"
+                "hello",
+                "hi darling"
             ]
         },
         {
@@ -6560,7 +6565,8 @@
                 0.12910246849060059
             ],
             "answers": [
-                "Lighting turned off!"
+                "Lighting turned off!",
+                "Shut up"
             ]
         },
         {
@@ -6976,7 +6982,8 @@
                 -0.197555273771286
             ],
             "answers": [
-                "My name is Jarvis."
+                "My name is Jarvis.",
+                " I dropped her grandma's and dogs ashes and blamed it on her cat."
             ]
         },
         {
@@ -7080,7 +7087,9 @@
                 0.3566703200340271
             ],
             "answers": [
-                "Wendy Williams <3"
+                "Wendy Williams <3",
+                "Well, Peter. The horse is here.",
+                "Stop what?!"
             ]
         },
         {
@@ -7393,7 +7402,8 @@
             ],
             "answers": [
                 "Slay",
-                "twat"
+                "twat",
+                "Shur"
             ]
         },
         {
@@ -7707,6 +7717,7 @@
             "answers": [
                 "pausing media now.",
                 "pause media",
+                "pause media",
                 "pause media"
             ]
         },
@@ -7814,7 +7825,8 @@
                 "playing media now. ",
                 "play media",
                 "play media",
-                "play the song"
+                "play the song",
+                "play media"
             ]
         },
         {

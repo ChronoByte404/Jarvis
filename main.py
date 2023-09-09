@@ -7,7 +7,7 @@ from Utilities.server import *
 # Interfaces
 
 from Interfaces.discord import *
-from Interfaces.whisper import *
+from Interfaces.whisper_client import *
 from Interfaces.gui import *
 from Interfaces.basic import *
 from Interfaces.terminal import *
@@ -39,6 +39,17 @@ def ChooseClient():
         httpd = HTTPServer(server_address, RequestHandler)
         print('8000')
         httpd.serve_forever()
+    elif "whisper" in ClientOption:
+        VoiceInput = Audio()
+        Bot = terminal_chat()
+        while True:
+            try:
+                VoiceInput.VoiceCommand()
+                input_string = VoiceInput.speech()
+                ResponseOutput = Bot.say(input_string)
+                print(ResponseOutput)
+            except:
+                print("No speech detected.")
 
 if __name__ == "__main__":
     ChooseClient()
