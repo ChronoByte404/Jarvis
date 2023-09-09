@@ -1,9 +1,11 @@
 import requests
 import json
+from Utilities.functions import *
 
 class Basic:
     def __init__(self):
-        self.url = "http://localhost:8000"
+        settings = loadconfig("Settings/configuration.json")
+        self.url = settings.get("url")
         self.intent_class = None
 
     def say(self, sentence):
