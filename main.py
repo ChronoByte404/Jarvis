@@ -40,16 +40,17 @@ def ChooseClient():
         print('8000')
         httpd.serve_forever()
     elif "whisper" in ClientOption:
-        VoiceInput = Audio()
         Bot = terminal_chat()
+        VoiceInput = Audio()
         while True:
-            try:
+#            try:
                 VoiceInput.VoiceCommand()
-                input_string = VoiceInput.speech()
-                ResponseOutput = Bot.say(input_string)
+                InputString = VoiceInput.speech()
+                ResponseOutput = Bot.say(InputString)
                 print(ResponseOutput)
-            except:
-                print("No speech detected.")
+#            except:
+#                print("No speech detected.")
+#                pass
 
 if __name__ == "__main__":
     ChooseClient()
