@@ -419,7 +419,11 @@
             "answers": [
                 "It aired on the 23rd of November, 1963.",
                 "ok",
-                "SHut up"
+                "SHut up",
+                "ok",
+                "ok",
+                "ok",
+                "ok"
             ]
         },
         {
@@ -532,6 +536,9 @@
                 "Hi",
                 "bye",
                 "Hello",
+                "Hello",
+                "Hi",
+                "No",
                 "Hello"
             ]
         },
@@ -640,7 +647,8 @@
                 "I'm awesome, thanks",
                 "I promise",
                 "I'm actually very good, thanks.",
-                "i love you"
+                "i love you",
+                "Thank you"
             ]
         },
         {
@@ -746,7 +754,8 @@
             "answers": [
                 "Are you good?",
                 "That's good to hear.",
-                "yes that's legitimately what i asked"
+                "yes that's legitimately what i asked",
+                "Okay music is now paused"
             ]
         },
         {
@@ -2337,7 +2346,9 @@
                 "Okay",
                 "Okay",
                 "Amen johnny",
-                "okay"
+                "okay",
+                "yes",
+                "hey"
             ]
         },
         {
@@ -3385,7 +3396,8 @@
                 "I promise!",
                 "I'd like to imagine it is!",
                 "stop",
-                "Jarvis, sing Never gonna give you up"
+                "Jarvis, sing Never gonna give you up",
+                "done"
             ]
         },
         {
@@ -3939,7 +3951,11 @@
                 "Amazon Music",
                 "I love Wendy Williams omg",
                 "Thanks loce",
-                "Volume 10"
+                "Volume 10",
+                "Jack",
+                "13 december",
+                "Shite",
+                "Open BBC iPlayee"
             ]
         },
         {
@@ -4257,7 +4273,8 @@
                 "I'm not clever enough to turn evil",
                 "ask me something Jarvis",
                 "dunno",
-                "Kill yourself Jarvis"
+                "Kill yourself Jarvis",
+                "tell me joke"
             ]
         },
         {
@@ -5200,7 +5217,10 @@
                 "play the music",
                 "play music",
                 "play music",
-                "play music"
+                "play music",
+                "opened",
+                "playing music",
+                "Returning"
             ]
         },
         {
@@ -5305,7 +5325,9 @@
             ],
             "answers": [
                 "OKay! Pausing music.",
-                "Show me your credit card Jarvis"
+                "Show me your credit card Jarvis",
+                "joke",
+                "1963 innit"
             ]
         },
         {
@@ -6461,6 +6483,7 @@
             "answers": [
                 "Sure, opening Google.",
                 "hello",
+                "hello",
                 "hello"
             ]
         },
@@ -6774,7 +6797,8 @@
                 0.7681609988212585
             ],
             "answers": [
-                "Sure, YouTube opening."
+                "Sure, YouTube opening.",
+                "Thanks x"
             ]
         },
         {
@@ -7403,7 +7427,9 @@
             "answers": [
                 "Slay",
                 "twat",
-                "Shur"
+                "Shur",
+                "Opened",
+                "slayed"
             ]
         },
         {
