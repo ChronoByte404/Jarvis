@@ -7,6 +7,7 @@ class JarvisAI:
     def __init__(self):
         self.chatbot = JanexBot("AI/database.json", "en_core_web_sm")
         self.classifier = JanexPT("AI/intents.json")
+        self.classifier.modify_data_path("BinaryFiles/data.pth")
         self.previous_input = None
         self.response_check()
 
