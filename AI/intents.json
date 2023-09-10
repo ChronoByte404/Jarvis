@@ -3,92 +3,122 @@
     {
       "tag": "open-google",
       "patterns": ["Open Google", "Go to Google", "Launch Google"],
-      "responses": ["Opening Google...", "Navigating to Google.", "Google is now open."]
+      "responses": ["Opening Google...", "Navigating to Google.", "Google is now open."],
+      "context": "command"
     },
     {
       "tag": "open-amazon",
       "patterns": ["Open Amazon", "Go to Amazon", "Launch Amazon"],
-      "responses": ["Opening Amazon...", "Navigating to Amazon.", "Amazon is now open."]
+      "responses": ["Opening Amazon...", "Navigating to Amazon.", "Amazon is now open."],
+      "context": "command"
     },
     {
       "tag": "open-youtube",
       "patterns": ["Open YouTube", "Go to YouTube", "Launch YouTube"],
-      "responses": ["Opening YouTube...", "Navigating to YouTube.", "YouTube is now open."]
+      "responses": ["Opening YouTube...", "Navigating to YouTube.", "YouTube is now open."],
+      "context": "command"
     },
     {
       "tag": "open-openai",
       "patterns": ["Open OpenAI", "Go to OpenAI", "Launch OpenAI"],
-      "responses": ["Opening OpenAI...", "Navigating to OpenAI.", "OpenAI is now open."]
+      "responses": ["Opening OpenAI...", "Navigating to OpenAI.", "OpenAI is now open."],
+      "context": "command"
     },
     {
       "tag": "open-amazon-music",
       "patterns": ["Open Amazon Music", "Go to Amazon Music", "Launch Amazon Music"],
-      "responses": ["Opening Amazon Music...", "Navigating to Amazon Music.", "Amazon Music is now open."]
+      "responses": ["Opening Amazon Music...", "Navigating to Amazon Music.", "Amazon Music is now open."],
+      "context": "command"
     },
     {
       "tag": "open-twitter",
       "patterns": ["Open Twitter", "Go to Twitter", "Launch Twitter"],
-      "responses": ["Opening Twitter...", "Navigating to Twitter.", "Twitter is now open."]
+      "responses": ["Opening Twitter...", "Navigating to Twitter.", "Twitter is now open."],
+      "context": "command"
     },
     {
       "tag": "pause-music",
       "patterns": ["Pause music", "Stop music", "Pausing music", "Stopping the music", "pause music", "cutting music", "kill music"],
-      "responses": ["Pausing the music...", "Stopping the music.", "Music is now paused."]
+      "responses": ["Pausing the music...", "Stopping the music.", "Music is now paused."],
+      "context": "command"
     },
     {
       "tag": "play-music",
       "patterns": ["play music", "resume music", "music resumed", "music playing", "playing music", "resuming music"],
-      "responses": ["Playing music...", "Resuming music.", "Music is now playing."]
+      "responses": ["Playing music...", "Resuming music.", "Music is now playing."],
+      "context": "command"
     },
     {
       "tag": "next-song",
       "patterns": ["playing the next song", "play next song", "skip song", "skipping song"],
-      "responses": ["Playing the next song...", "Skipping to the next song.", "Next song is now playing."]
+      "responses": ["Playing the next song...", "Skipping to the next song.", "Next song is now playing."],
+      "context": "command"
     },
     {
       "tag": "previous-song",
       "patterns": ["reverse the song", "previous song", "replay song"],
-      "responses": ["Reversing the song...", "Playing the previous song.", "Previous song is now playing."]
+      "responses": ["Reversing the song...", "Playing the previous song.", "Previous song is now playing."],
+      "context": "command"
+    },
+    {
+      "tag": "max-vol",
+      "patterns": ["Max out the volume", "Maximum volume", "Increase volume to MAXIMUM"],
+      "responses": ["Volume at maximum.", "As you wish."],
+      "context": "command"
+    },
+    {
+      "tag": "mute",
+      "patterns": ["mute", "silence", "mute the volume"],
+      "responses": ["Muted.", "Volume muted."],
+      "context": "command"
     },
     {
       "tag": "greet",
       "patterns": ["Hi", "Hello", "Hey", "Greetings"],
-      "responses": ["Hello!", "Hi there!", "Hey!", "Greetings!"]
+      "responses": ["Hello!", "Hi there!", "Hey!", "Greetings!"],
+      "context": "small-talk"
     },
     {
       "tag": "how-are-you",
       "patterns": ["How are you?", "How's it going?", "What's up?"],
-      "responses": ["I'm good, thanks for asking!", "I'm doing well, how about you?", "Not bad, how about yourself?"]
+      "responses": ["I'm good, thanks for asking!", "I'm doing well, how about you?", "Not bad, how about yourself?"],
+      "context": "small-talk"
     },
     {
       "tag": "thank-you",
       "patterns": ["Thank you", "Thanks", "Appreciate it"],
-      "responses": ["You're welcome!", "No problem!", "You got it!"]
+      "responses": ["You're welcome!", "No problem!", "You got it!"],
+      "context": "small-talk"
     },
     {
       "tag": "goodbye",
       "patterns": ["Goodbye", "See you later", "Bye", "Farewell"],
-      "responses": ["Goodbye!", "See you later!", "Bye!", "Take care!"]
+      "responses": ["Goodbye!", "See you later!", "Bye!", "Take care!"],
+      "context": "small-talk"
     },
     {
       "tag": "weather",
       "patterns": ["What's the weather like today?", "Tell me the weather forecast", "Is it going to rain?"],
-      "responses": ["I'm not sure about the current weather, you might want to check a weather website or app for that.", "I don't have real-time weather information, but you can check a weather service for the latest updates."]
+      "responses": ["I'm not sure about the current weather, you might want to check a weather website or app for that.", "I don't have real-time weather information, but you can check a weather service for the latest updates."],
+      "context": "small-talk"
     },
     {
       "tag": "weekend-plans",
       "patterns": ["Any plans for the weekend?", "What are you doing this weekend?", "Got any fun weekend activities?"],
-      "responses": ["I'm just here to chat, but I hope you have a great weekend planned!", "No plans for me, but I hope you enjoy your weekend!"]
+      "responses": ["I'm just here to chat, but I hope you have a great weekend planned!", "No plans for me, but I hope you enjoy your weekend!"],
+      "context": "small-talk"
     },
     {
       "tag": "movie-recommendation",
       "patterns": ["Can you recommend a good movie?", "What's a popular movie to watch?", "Any movie suggestions?"],
-      "responses": ["Sure! How about watching [Movie Title] or [Another Movie Title]? They're both highly rated.", "I heard [Movie Title] is really good, you might enjoy that one."]
+      "responses": ["Sure! How about watching [Movie Title] or [Another Movie Title]? They're both highly rated.", "I heard [Movie Title] is really good, you might enjoy that one."],
+      "context": "small-talk"
     },
     {
       "tag": "change-response-type",
       "patterns": ["Switch response type", "change response type to fixed", "change response type to random", "enable random pattern generation", "disable random pattern generation"],
-      "responses": ["Switching..."]
+      "responses": ["Switching..."],
+      "context": "small-talk"
     }
   ]
 }

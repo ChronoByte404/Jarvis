@@ -1822,7 +1822,8 @@
                 "Good",
                 "\u001b[A",
                 "Right.",
-                "Right."
+                "Right.",
+                "great"
             ]
         },
         {
@@ -2355,7 +2356,8 @@
                 "Amen johnny",
                 "okay",
                 "yes",
-                "hey"
+                "hey",
+                "okay"
             ]
         },
         {
@@ -3965,7 +3967,8 @@
                 "Open BBC iPlayee",
                 "Open Amazon",
                 "Open Amazon",
-                "Werk"
+                "Werk",
+                "open amazon"
             ]
         },
         {
@@ -6498,7 +6501,9 @@
                 "hello",
                 "hello",
                 "Nah",
-                "Nah"
+                "Nah",
+                "hello",
+                "hello"
             ]
         },
         {
@@ -6708,7 +6713,8 @@
                 0.08638997375965118
             ],
             "answers": [
-                "Lighting turned on!"
+                "Lighting turned on!",
+                "max out the volume"
             ]
         },
         {
@@ -7759,7 +7765,8 @@
                 "pausing media now.",
                 "pause media",
                 "pause media",
-                "pause media"
+                "pause media",
+                "change response type"
             ]
         },
         {

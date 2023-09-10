@@ -1,4 +1,4 @@
 {
-  "response-type": "random",
-  "url": "http://localhost:8000"
+    "response-type": "fixed",
+    "url": "http://localhost:8000"
 }
