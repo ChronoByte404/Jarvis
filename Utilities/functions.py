@@ -3,6 +3,8 @@ import os
 import sys
 import webbrowser
 import playsound
+import pyttsx3
+import threading
 
 # Internal functions
 
@@ -129,3 +131,38 @@ def previous_music():
         os.system("playerctl previous")
     else:
         print("Operating system is not supported!")
+
+def sleepPC():
+    if OS == "Linux":
+        print("Running on Linux")
+        HostOS = "Linux"
+        os.system("sleep 1; xset dpms force off")
+
+def mute():
+    if OS == "Linux":
+        print("Running on Linux")
+        HostOS = "Linux"
+        os.system(f"amixer -D pulse sset Master 0%")
+
+    elif OS == "MacOS":
+        print("Running on macOS")
+        os.system("osascript -e 'set Volume 0'")
+
+def maxvol():
+    if OS == "Linux":
+        print("Running on Linux")
+        HostOS = "Linux"
+        os.system(f"amixer -D pulse sset Master 100%")
+
+    elif OS == "MacOS":
+        print("Running on macOS")
+        os.system("osascript -e 'set Volume 10'")
+
+engine = pyttsx3.init()
+
+def speak(ResponseOutput):
+    engine.say(ResponseOutput)
+    engine.runAndWait()
+
+def tts(ResponseOutput):
+    threading.Thread(target=speak, args=(ResponseOutput,)).start()

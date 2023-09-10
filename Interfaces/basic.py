@@ -24,8 +24,6 @@ class Basic:
                 ResponseOutput = response_data.get('response', '')
                 intent_class = response_data.get('intent_class', '')
                 self.intent_class = intent_class
-
-                # You can use ResponseOutput and intent_class as needed
                 return ResponseOutput
             else:
                 print(f"Error: Received status code {fullresponse.status_code}")
@@ -38,3 +36,6 @@ class Basic:
         ic = self.intent_class
         self.intent_class = None
         return ic
+
+    def tts(self, ResponseOutput):
+        tts(ResponseOutput)

@@ -33,6 +33,7 @@ def ChooseClient():
         while True:
             input_string = input("You: ")
             ResponseOutput = Bot.say(input_string)
+            tts(ResponseOutput)
             print(ResponseOutput)
     elif "server" in ClientOption:
         server_address = ('', 8000)
@@ -43,14 +44,15 @@ def ChooseClient():
         Bot = terminal_chat()
         VoiceInput = Audio()
         while True:
-#            try:
+            try:
                 VoiceInput.VoiceCommand()
                 InputString = VoiceInput.speech()
                 ResponseOutput = Bot.say(InputString)
+                tts(ResponseOutput)
                 print(ResponseOutput)
-#            except:
-#                print("No speech detected.")
-#                pass
+            except:
+                print("No speech detected.")
+                pass
 
 if __name__ == "__main__":
     ChooseClient()

@@ -539,7 +539,9 @@
                 "Hello",
                 "Hi",
                 "No",
-                "Hello"
+                "Hello",
+                "Hello",
+                "No"
             ]
         },
         {
@@ -859,7 +861,8 @@
                 0.4125156104564667
             ],
             "answers": [
-                "No you didn't. I said I was."
+                "No you didn't. I said I was.",
+                "Then you were mistaken"
             ]
         },
         {
@@ -1172,7 +1175,8 @@
                 0.4262016713619232
             ],
             "answers": [
-                "Together, we are robots."
+                "Together, we are robots.",
+                "Yes, I have"
             ]
         },
         {
@@ -1596,7 +1600,9 @@
             "answers": [
                 "What is god to you?",
                 "No you're not.",
-                "Yes but not too much or they get ill"
+                "Yes but not too much or they get ill",
+                "Right",
+                "Right"
             ]
         },
         {
@@ -1815,6 +1821,7 @@
                 "right.",
                 "Good",
                 "\u001b[A",
+                "Right.",
                 "Right."
             ]
         },
@@ -3955,7 +3962,10 @@
                 "Jack",
                 "13 december",
                 "Shite",
-                "Open BBC iPlayee"
+                "Open BBC iPlayee",
+                "Open Amazon",
+                "Open Amazon",
+                "Werk"
             ]
         },
         {
@@ -4166,7 +4176,8 @@
                 "Opening YouTube.",
                 "Thanks.",
                 "thanks",
-                "thanks"
+                "thanks",
+                "Honestly... werk."
             ]
         },
         {
@@ -6484,7 +6495,10 @@
                 "Sure, opening Google.",
                 "hello",
                 "hello",
-                "hello"
+                "hello",
+                "hello",
+                "Nah",
+                "Nah"
             ]
         },
         {
@@ -6589,7 +6603,8 @@
             ],
             "answers": [
                 "Lighting turned off!",
-                "Shut up"
+                "Shut up",
+                "shut up"
             ]
         },
         {
