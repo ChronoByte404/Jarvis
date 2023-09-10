@@ -119,6 +119,12 @@
       "patterns": ["Switch response type", "change response type to fixed", "change response type to random", "enable random pattern generation", "disable random pattern generation"],
       "responses": ["Switching..."],
       "context": "small-talk"
+    },
+    {
+      "tag": "sleep-monitors",
+      "patterns": ["Sleep monitors", "Shut down the monitors", "Shut displays", "Close displays"],
+      "responses": ["Sleeping monitors.", "Shutting down the monitors.", "Displays turned off.", "Displays closed."],
+      "context": "command"
     }
   ]
 }

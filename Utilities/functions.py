@@ -2,7 +2,7 @@ import json
 import os
 import sys
 import webbrowser
-import playsound
+from playsound import playsound
 import pyttsx3
 import threading
 
@@ -38,6 +38,7 @@ def check_os():
         return "Unknown"
 
 def DoFunction(intent_class):
+    play_sound_in_background("AudioFiles/speechunderstood.mp3")
     intent_class = intent_class.get("tag")
     print(intent_class)
     if intent_class == "open-google":
@@ -70,6 +71,8 @@ def DoFunction(intent_class):
         previous_music()
     elif intent_class == "change-response-type":
         change_response_setting()
+    elif intent_class == "sleep-monitors":
+        sleepPC()
 
 OS = check_os()
 # Website functions

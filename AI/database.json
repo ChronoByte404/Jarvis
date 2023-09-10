@@ -541,6 +541,7 @@
                 "No",
                 "Hello",
                 "Hello",
+                "No",
                 "No"
             ]
         },
@@ -1823,7 +1824,8 @@
                 "\u001b[A",
                 "Right.",
                 "Right.",
-                "great"
+                "great",
+                "Right."
             ]
         },
         {
@@ -6391,7 +6393,8 @@
                 0.5497962236404419
             ],
             "answers": [
-                "Sure. Opening Amazon now."
+                "Sure. Opening Amazon now.",
+                "Awesome!"
             ]
         },
         {
@@ -7766,7 +7769,8 @@
                 "pause media",
                 "pause media",
                 "pause media",
-                "change response type"
+                "change response type",
+                "switch response method"
             ]
         },
         {
