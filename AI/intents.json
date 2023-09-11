@@ -116,15 +116,21 @@
     },
     {
       "tag": "change-response-type",
-      "patterns": ["Switch response type", "change response type to fixed", "change response type to random", "enable random pattern generation", "disable random pattern generation"],
-      "responses": ["Switching..."],
-      "context": "small-talk"
+      "patterns": ["Switch response type", "change response type to fixed", "change response type to random", "enable random pattern generation", "disable random pattern generation", "Modify the way you respond", "Change your response style"],
+      "responses": ["Switching...", "Changing response type...", "Response type updated.", "Altering response style."],
+      "context": "command"
     },
     {
       "tag": "sleep-monitors",
       "patterns": ["Sleep monitors", "Shut down the monitors", "Shut displays", "Close displays"],
       "responses": ["Sleeping monitors.", "Shutting down the monitors.", "Displays turned off.", "Displays closed."],
       "context": "command"
+    },
+    {
+      "tag": "tech-assistance",
+      "patterns": ["Help with technology", "Technical support", "Assist me with my device", "I need tech help", "Can you fix technical issues?"],
+      "responses": ["Of course! What technical issue are you facing?", "I'd be happy to help with your technical issue. Could you please provide more details?", "Sure, I'm here to assist with your tech-related concerns.", "I'm here to help with any technical problems you have. Please let me know what's going on."],
+      "context": "small-talk"
     }
   ]
 }
