@@ -2370,7 +2370,8 @@
                 "okay",
                 "Yes",
                 "yes",
-                "Okay"
+                "Okay",
+                "yes"
             ]
         },
         {
@@ -6065,7 +6066,8 @@
                 "hello",
                 "hi Jarvis",
                 "black",
-                "nah"
+                "nah",
+                "open amazon"
             ]
         },
         {
@@ -7016,7 +7018,8 @@
                 "Thanks",
                 "Slay",
                 "stop",
-                "Cool"
+                "Cool",
+                "thanks"
             ]
         },
         {
@@ -7652,7 +7655,8 @@
                 "No, leave it.",
                 "disable random pattern gen",
                 "Good",
-                "Disable random"
+                "Disable random",
+                "disable random pattern shit"
             ]
         },
         {

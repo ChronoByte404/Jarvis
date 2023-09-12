@@ -131,6 +131,18 @@
       "patterns": ["Help with technology", "Technical support", "Assist me with my device", "I need tech help", "Can you fix technical issues?"],
       "responses": ["Of course! What technical issue are you facing?", "I'd be happy to help with your technical issue. Could you please provide more details?", "Sure, I'm here to assist with your tech-related concerns.", "I'm here to help with any technical problems you have. Please let me know what's going on."],
       "context": "small-talk"
+    },
+    {
+      "tag": "yes",
+      "patterns": ["Yes", "Yep", "Yeah", "Sure", "Absolutely", "Of course", "Affirmative"],
+      "responses": ["Great!", "Good to know!", "Awesome!", "Excellent!"],
+      "context": "confirmation"
+    },
+    {
+      "tag": "no",
+      "patterns": ["No", "Nope", "Nah", "Not really", "Negative"],
+      "responses": ["Alright.", "Got it.", "Understood.", "No problem."],
+      "context": "confirmation"
     }
   ]
 }
