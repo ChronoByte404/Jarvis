@@ -5,6 +5,8 @@ import webbrowser
 from playsound import playsound
 import pyttsx3
 import threading
+from datetime import datetime
+import time
 
 # Internal functions
 
@@ -23,6 +25,9 @@ def play_notification_sound(sound_file_path):
 def play_sound_in_background(notification_sound_file):
     threading.Thread(target=play_notification_sound, args=(notification_sound_file,)).start()
 
+def DoFunction(intent_class):
+    threading.Thread(target=DeployFunction, args=(intent_class,)).start()
+
 def check_os():
     if sys.platform.startswith('linux'):
         print(f"Linux-based Operating System Detected.")
@@ -37,7 +42,7 @@ def check_os():
         print(f"Caution: Unknown Operating System detected: {sys.platform}")
         return "Unknown"
 
-def DoFunction(intent_class):
+def DeployFunction(intent_class):
     play_sound_in_background("AudioFiles/speechunderstood.mp3")
     intent_class = intent_class.get("tag")
     print(intent_class)
@@ -73,9 +78,39 @@ def DoFunction(intent_class):
         change_response_setting()
     elif intent_class == "sleep-monitors":
         sleepPC()
+    elif intent_class == "max-vol":
+        maxvol()
+    elif intent_class == "timer":
+        set_timer()
 
 OS = check_os()
 # Website functions
+
+def timer(time_in_seconds):
+    time.sleep(time_in_seconds*60)
+    play_sound_in_background("./AudioFiles/alarm_clock.mp3")
+
+def set_timer():
+    settings_config = loadconfig("./Settings/configuration.json")
+    time_in_seconds = settings_config.get("default_timer")
+    threading.Thread(target=timer, args=(time_in_seconds,)).start()
+
+def background_alarm_clock():
+    test = 1
+    threading.Thread(target=alarm_clock, args=(test,)).start()
+
+def alarm_clock(test):
+    settings_config = loadconfig("./Settings/configuration.json")
+    wake_time = settings_config.get("wake_time")
+    E = 1
+    while True:
+        current_time = datetime.now().time()
+        formatted_time = current_time.strftime("%H:%M")
+        if formatted_time == wake_time:
+            os.system(f"amixer -D pulse sset Master 50%")
+            tts("Good morning. It is eight AM.")
+            play_sound_in_background("./AudioFiles/alarm_clock.mp3")
+            time.sleep(60)
 
 def change_response_setting():
     settings_config = loadconfig("./Settings/configuration.json")

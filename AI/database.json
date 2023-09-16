@@ -209,7 +209,8 @@
             "answers": [
                 "The Declaration of Independence was signed on July 4, 1776.",
                 "The declaration of independent was signed on July 4, 1776. According to you.",
-                "i could add some moderation features to Jarvis, he used to automate Huw Prosser's server before it was shut down"
+                "i could add some moderation features to Jarvis, he used to automate Huw Prosser's server before it was shut down",
+                "I\u2019m looking through Jarvis\u2019 code and saw Depression and Anxiety in the authorised servers list lol"
             ]
         },
         {
@@ -318,7 +319,8 @@
                 "Mona Lisa",
                 "Mona Lisa",
                 "Mona Lisa",
-                "Mona Lisa"
+                "Mona Lisa",
+                "suck a dick"
             ]
         },
         {
@@ -548,6 +550,8 @@
                 "Hello",
                 "No",
                 "No",
+                "No",
+                "No",
                 "No"
             ]
         },
@@ -658,7 +662,10 @@
                 "I'm actually very good, thanks.",
                 "i love you",
                 "Thank you",
-                "Thank you"
+                "Thank you",
+                "i dontwant that",
+                "i despise them",
+                "Thanks bud"
             ]
         },
         {
@@ -870,7 +877,8 @@
             ],
             "answers": [
                 "No you didn't. I said I was.",
-                "Then you were mistaken"
+                "Then you were mistaken",
+                "Was it 1945? Idk I forgot what your data said"
             ]
         },
         {
@@ -1289,7 +1297,8 @@
             ],
             "answers": [
                 "But earlier you said you are a robot.",
-                "I am not a robot. I am a human. YOU are a robot."
+                "I am not a robot. I am a human. YOU are a robot.",
+                "Absolutely not, he\u2019s a bellend"
             ]
         },
         {
@@ -1398,7 +1407,8 @@
                 "No, I don't. I'm not one of those fake-god worshipping weirdos.",
                 "no Jarvis. I will not.",
                 "There's no intelligence here.",
-                "Yes. I'm from there."
+                "Yes. I'm from there.",
+                "yeah no shit"
             ]
         },
         {
@@ -1714,7 +1724,9 @@
                 -0.23320430517196655
             ],
             "answers": [
-                "Not everything could also be something. For example, not everything could be half of something, which is still something, and therefore not nothing."
+                "Not everything could also be something. For example, not everything could be half of something, which is still something, and therefore not nothing.",
+                "no",
+                "That\u2019s\u2026 not a response\u2026"
             ]
         },
         {
@@ -1832,7 +1844,9 @@
                 "Right.",
                 "Right.",
                 "great",
-                "Right."
+                "Right.",
+                "right",
+                "Really not very clever"
             ]
         },
         {
@@ -2147,7 +2161,8 @@
                 0.366912841796875
             ],
             "answers": [
-                "Haha you say itot."
+                "Haha you say itot.",
+                "pretty much what I did with Nebula who is now Jarvis lol"
             ]
         },
         {
@@ -2254,7 +2269,10 @@
                 "Do you want to have a body?",
                 "Jarvis don't be a bitch",
                 "Of course",
-                "i honestly don't see how-"
+                "i honestly don't see how-",
+                "you dont want estrogen",
+                "nah don't be doing that shit",
+                "That does not make sense."
             ]
         },
         {
@@ -2371,7 +2389,10 @@
                 "Yes",
                 "yes",
                 "Okay",
-                "yes"
+                "yes",
+                "Yes",
+                "yes",
+                "yes it does"
             ]
         },
         {
@@ -2580,7 +2601,8 @@
                 -0.2511593997478485
             ],
             "answers": [
-                "There are seven continents on Earth. Africa, Antartica, Asia, Europe, North America, Australia, and South America."
+                "There are seven continents on Earth. Africa, Antartica, Asia, Europe, North America, Australia, and South America.",
+                "Same"
             ]
         },
         {
@@ -2895,7 +2917,9 @@
             "answers": [
                 "It ended on the 2nd of September, 1945.",
                 "1963",
-                "1945"
+                "1945",
+                "( https://github.com/Cipher58/Jarvis ) lmao",
+                "I know I'm probably doing something wrong because I just copied what I though was correct from here but i got this error ```Traceback (most recent call last):\n  File \"d:\\Programming Projects\\AI Chatbots\\SoapBot v2.X.X\\AI\\test.py\", line 44, in <module>\n    JarvisAI = JarvisAI()\n  File \"d:\\Programming Projects\\AI Chatbots\\SoapBot v2.X.X\\AI\\test.py\", line 11, in __init__\n    self.classifier.modify_data_path(\"BinaryFiles/data.pth\")\nAttributeError: 'JanexPT' object has no attribute 'modify_data_path'``` in my test script for it: ```py\nfrom JanexBot import *\nfrom Janex import *\nfrom JanexPT import *\n\n# python -m spacy download en_core_web_sm\n\nclass JarvisAI:\n    def __init__(self):\n        self.chatbot = JanexBot(\"database.json\", \"en_core_web_sm\")\n        self.classifier = JanexPT(\"intents.json\")\n        self.classifier.modify_data_path(\"BinaryFiles/data.pth\")\n        self.previous_input = None\n        self.response_check()\n\n    def say(self, input_string):\n        self.response_check()\n        answer = input_string\n        self.previous_input = input_string\n        if self.response_setting == \"random\":\n            IsQuestion = self.chatbot.CheckForQuestion(answer)\n            if IsQuestion:\n                answer = self.chatbot.give_answer(answer)\n                return answer\n            else:\n                question = self.chatbot.ask_question(answer)\n                self.chatbot.save_answer(answer)\n                return question\n        else:\n            intent_class = self.get_class()\n            if intent_class:\n                responses = intent_class[\"responses\"]\n                response = random.choice(responses)\n                return response\n\n    def get_class(self):\n        input_string = self.previous_input\n        intent_class = self.classifier.pattern_compare(input_string)\n        return intent_class\n\n    def response_check(self):\n        self.response_setting = \"fixed\"\n\n\nJarvisAI = JarvisAI()\n\nJarvisAI.say(\"Hello\")```"
             ]
         },
         {
@@ -3421,7 +3445,9 @@
                 "stop",
                 "Jarvis, sing Never gonna give you up",
                 "done",
-                "Try me"
+                "Try me",
+                "I am supposed to say that",
+                "Do it lol"
             ]
         },
         {
@@ -3839,7 +3865,8 @@
             ],
             "answers": [
                 "Help... with what?",
-                "I suppose he might do"
+                "I suppose he might do",
+                "think it was 1945 mate"
             ]
         },
         {
@@ -4047,7 +4074,11 @@
                 0.14951123297214508
             ],
             "answers": [
-                "No, do you?"
+                "No, do you?",
+                "let's try this",
+                "I do have a dog. One dog left.",
+                "Jarvis do you think 9 11 was an inside job",
+                "Jarvis do you think 9 11 was an inside job"
             ]
         },
         {
@@ -4468,7 +4499,12 @@
                 "change to fixed responses",
                 "Switch to fixed responses",
                 "change response types",
-                "switch response types"
+                "switch response types",
+                "Okay opening Google Jarvis",
+                "this dude is jacks son fr",
+                "Hold up apparently we\u2019re an authorised server for Jarvis lol",
+                "https://github.com/Cipher58/Jarvis",
+                "cheers"
             ]
         },
         {
@@ -4678,7 +4714,9 @@
             ],
             "answers": [
                 "They are cute.",
-                "Jarvis, how many fingers do i have"
+                "Jarvis, how many fingers do i have",
+                "you do what",
+                "you do what"
             ]
         },
         {
@@ -4900,7 +4938,12 @@
                 "Carter lol",
                 "Rude",
                 "Rude boy",
-                "Rude"
+                "Rude",
+                "Slay queen \ud83d\udc85",
+                "Jarvis I\u2019ll pause your life support",
+                "Yass queen",
+                "open Amazon Music hunty",
+                "disable random pattern gen x"
             ]
         },
         {
@@ -5004,7 +5047,8 @@
                 -0.020663952454924583
             ],
             "answers": [
-                "Oh, I apologise. I thought you were."
+                "Oh, I apologise. I thought you were.",
+                "me obviously"
             ]
         },
         {
@@ -5214,7 +5258,8 @@
             "answers": [
                 "Yes, I'm an AI.",
                 "Wasn't the question Jarvis",
-                "that's not amazon lol"
+                "that's not amazon lol",
+                "it is quite literally ```py\nfrom bots.AI.test import JarvisAI\nJarvisAI = JarvisAI()\n@client.event\nasync def on_message(message):\n    if message.author == client.user:\n        return\n    \n    # await client.process_commands(message)\n    \n        # commands_list = []\n    for command in client.commands:\n        command = str(command)\n        if f\"Soap {command}\" in message.content:\n            allow_speak = False\n            await client.process_commands(message)\n            break\n        else:\n            allow_speak = True\n    \n    if \"Soap\" in message.content and allow_speak == True:\n        await message.channel.send(JarvisAI.say(message.content))```"
             ]
         },
         {
@@ -5635,7 +5680,8 @@
             ],
             "answers": [
                 "Maybe.",
-                "I'd like to imagine it is."
+                "I'd like to imagine it is.",
+                "go fuck yourself"
             ]
         },
         {
@@ -5739,7 +5785,9 @@
                 0.3363226354122162
             ],
             "answers": [
-                "Yes because that's perfectly efficient and logical."
+                "Yes because that's perfectly efficient and logical.",
+                "Jarvis go fuck yourself",
+                "Jarvis you said you would touch yourself, explain further"
             ]
         },
         {
@@ -5846,7 +5894,10 @@
                 "Do I fuck.",
                 "hello",
                 "hello",
-                "hi darling"
+                "hi darling",
+                "Jarvis do you like kids",
+                "JARVIS NO",
+                "at this point i dont even know who owns Jarvis, is it Ethan or Jack>"
             ]
         },
         {
@@ -5951,7 +6002,8 @@
             ],
             "answers": [
                 "Sure. Opening Amazon now.",
-                "Awesome!"
+                "Awesome!",
+                "Awsome!"
             ]
         },
         {
@@ -6067,7 +6119,9 @@
                 "hi Jarvis",
                 "black",
                 "nah",
-                "open amazon"
+                "open amazon",
+                "Jarvis hi",
+                "It\u2019s 1776, sorry Jarvis"
             ]
         },
         {
@@ -6383,7 +6437,8 @@
             ],
             "answers": [
                 "Sure, YouTube opening.",
-                "Thanks x"
+                "Thanks x",
+                "oki bab"
             ]
         },
         {
@@ -7019,7 +7074,13 @@
                 "Slay",
                 "stop",
                 "Cool",
-                "thanks"
+                "thanks",
+                "Stupid",
+                "Stop",
+                "Hey",
+                "Cunt",
+                "dyes",
+                "pause"
             ]
         },
         {
@@ -7123,7 +7184,9 @@
                 0.1932566612958908
             ],
             "answers": [
-                "I know."
+                "I know.",
+                "no he's a dick",
+                "Jarvis is a toddler"
             ]
         },
         {
@@ -7336,7 +7399,9 @@
                 "pause media",
                 "pause media",
                 "change response type",
-                "switch response method"
+                "switch response method",
+                "slay hunty",
+                "change response type"
             ]
         },
         {
@@ -7444,7 +7509,9 @@
                 "play media",
                 "play media",
                 "play the song",
-                "play media"
+                "play media",
+                "Jarvis likes kids confirmed",
+                "kill yourself, no takesie backsies"
             ]
         },
         {
@@ -7548,7 +7615,8 @@
                 0.06391231715679169
             ],
             "answers": [
-                "Because you're acting like one."
+                "Because you're acting like one.",
+                "if you respond like this again yes"
             ]
         },
         {
@@ -7656,7 +7724,8 @@
                 "disable random pattern gen",
                 "Good",
                 "Disable random",
-                "disable random pattern shit"
+                "disable random pattern shit",
+                "disable random pattern gen"
             ]
         },
         {
@@ -7864,7 +7933,8 @@
                 1.0235933065414429
             ],
             "answers": [
-                "WHAT"
+                "WHAT",
+                "Lil-E is my robot dog"
             ]
         },
         {
@@ -8179,7 +8249,8 @@
             "answers": [
                 "You would punch your master in the face?",
                 "I will punch you in the face",
-                "You would punch your master in the face"
+                "You would punch your master in the face",
+                "despise them"
             ]
         }
     ]

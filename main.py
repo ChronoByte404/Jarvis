@@ -55,4 +55,5 @@ def ChooseClient():
                 pass
 
 if __name__ == "__main__":
+    background_alarm_clock()
     ChooseClient()

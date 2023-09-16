@@ -143,6 +143,12 @@
       "patterns": ["No", "Nope", "Nah", "Not really", "Negative"],
       "responses": ["Alright.", "Got it.", "Understood.", "No problem."],
       "context": "confirmation"
+    },
+    {
+      "tag": "timer",
+      "patterns": ["Activate the timer", "Set timer", "set off timer"],
+      "responses": ["The timer has been set.", "Sure thing, default timer has been set."],
+      "context": "command"
     }
   ]
 }
