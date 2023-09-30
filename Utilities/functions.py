@@ -7,8 +7,18 @@ import pyttsx3
 import threading
 from datetime import datetime
 import time
+import psutil
 
 # Internal functions
+def check_network_status():
+    while True:
+        if not psutil.net_if_stats()['eth0'].isup:  # Change 'wlan0' to your network interface
+            print("Network disconnected!")
+            # Do something when network disconnects
+        time.sleep(5)  # Adjust the sleep time as needed
+
+def background_network():
+    threading.Thread(target=check_network_status, args=()).start()
 
 def loadconfig(config_file_path):
     with open(config_file_path, "r") as json_file:
@@ -82,6 +92,8 @@ def DeployFunction(intent_class):
         maxvol()
     elif intent_class == "timer":
         set_timer()
+    elif intent_class == "update-github":
+        upload_to_github()
 
 OS = check_os()
 # Website functions
@@ -149,6 +161,11 @@ def open_atom():
 
 def open_libreoffice():
     os.system("libreoffice")
+
+def upload_to_github():
+    os.system("git add *")
+    os.system('git commit -m "Automated upload from Jarvis."')
+    os.system("git push")
 
 # Media functions
 

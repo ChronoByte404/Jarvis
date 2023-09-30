@@ -41,7 +41,6 @@ def whisper_function():
     VoiceInput = Audio()
     while True:
         try:
-            Hologram.switch_to_blue()
             VoiceInput.VoiceCommand()
             InputString = VoiceInput.speech()
             ResponseOutput = Bot.say(InputString)
@@ -50,7 +49,6 @@ def whisper_function():
         except:
             print("No speech detected.")
             pass
-        Hologram.switch_to_yellow()
 
 def server_function():
     server_address = ('', 8000)

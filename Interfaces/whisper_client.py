@@ -3,6 +3,7 @@ import pyaudio
 import wave
 import numpy as np
 from scipy.io import wavfile
+from Utilities.functions import *
 
 class Audio:
     def __init__(self):

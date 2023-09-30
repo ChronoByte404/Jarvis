@@ -149,6 +149,12 @@
       "patterns": ["Activate the timer", "Set timer", "set off timer"],
       "responses": ["The timer has been set.", "Sure thing, default timer has been set."],
       "context": "command"
+    },
+    {
+      "tag": "update-github",
+      "patterns": ["Push to github.", "Commit changes to github", "Upload changes to github."],
+      "responses": ["On it. Comitting and pushing changes now.", "Committing changes, give us a moment.", "On it, committing recent changes and uploading to Github.", "Sure thing, updating repo."],
+      "context": "command"
     }
   ]
 }
