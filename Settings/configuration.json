@@ -2,5 +2,9 @@
     "response-type": "fixed",
     "url": "http://localhost:8000",
     "default_timer": 10,
-    "wake_time": "08:00"
+    "wake_time": "08:00",
+    "UIName": "Jarvis",
+    "Command_Prefix": "/",
+    "Authorised_Servers": ["A.R.U. Computing", "Depression & Anxiety", "Depression and Anxiety", "The Workshop ⚙"],
+    "Authorised_Users": ["cipher58"]
 }
