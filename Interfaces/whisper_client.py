@@ -8,12 +8,12 @@ from Utilities.functions import *
 class Audio:
     def __init__(self):
         self.e = 0
-        self.model = whisper.load_model("base.en")
+        self.model = whisper.load_model("tiny.en")
         self.chunk = 1024
         self.sample_format = pyaudio.paInt16
         self.channels = 1
         self.fs = 44100
-        self.seconds = 3.8
+        self.seconds = 2.8
         self.filename = "AudioFiles/audio.wav"
         self.threshold = 5000
 
