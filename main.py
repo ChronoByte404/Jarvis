@@ -43,11 +43,13 @@ def whisper_function():
     while True:
         try:
             VoiceInput.VoiceCommand()
+            Hologram.switch_to_blue()
             InputString = VoiceInput.speech()
             ResponseOutput = Bot.say(InputString)
             tts(ResponseOutput)
             print(ResponseOutput)
             Hologram.ResponseOutput = ResponseOutput
+            Hologram.switch_to_yellow()
         except:
             print("No speech detected.")
             pass
