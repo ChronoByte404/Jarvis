@@ -14,7 +14,7 @@ class DiscordBot:
         self.DiscordAPI = DiscordAPI
         self.url = "http://localhost:8000"
 
-        config_data = loadconfig("AI/config.json")
+        config_data = loadconfig("Settings/discord_key.json")
         settings = loadconfig("Settings/configuration.json")
 
         self.UIName = settings.get("UIName")
