@@ -10,6 +10,7 @@ class JarvisAI:
         self.classifier.modify_data_path("BinaryFiles/data.pth")
         self.previous_input = None
         self.response_check()
+        self.classifier.device = torch.device('cpu')
 
     def say(self, input_string):
         self.response_check()

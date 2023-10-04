@@ -26,6 +26,7 @@ Hologram = NeuralHologram()
 def discord_function():
     DiscordAPI = config_data.get("DiscordAPI")
     Bot = DiscordBot(DiscordAPI)
+    Hologram.ResponseOutput = Bot.ResponseOutput
     Bot.activate_bot()
 
 def basic_function():
@@ -46,11 +47,13 @@ def whisper_function():
             ResponseOutput = Bot.say(InputString)
             tts(ResponseOutput)
             print(ResponseOutput)
+            Hologram.ResponseOutput = ResponseOutput
         except:
             print("No speech detected.")
             pass
 
 def server_function():
+    Hologram.switch_to_blue()
     server_address = ('', 8000)
     httpd = HTTPServer(server_address, RequestHandler)
     print('8000')
@@ -76,7 +79,7 @@ def ChooseClient():
     elif "whisper" in ClientOption:
         whisper_function()
     elif "all" in ClientOption:
-        Hologram.switch_to_blue()
+#        Hologram.switch_to_blue()
         all_function()
 
 if __name__ == "__main__":

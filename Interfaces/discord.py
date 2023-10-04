@@ -28,6 +28,7 @@ class DiscordBot:
         self.Basic = Basic()
         self.authorised_servers = settings.get("Authorised_Servers")
         self.authorised_users = settings.get("Authorised_Users")
+        self.ResponseOutput = ""
 
     def activate_bot(self):
         @self.client.event
@@ -40,6 +41,7 @@ class DiscordBot:
                     return
                 sentence = str(sentence)
                 ResponseOutput = self.Basic.say(sentence)
+                self.ResponseOutput = ResponseOutput
                 await message.reply(ResponseOutput)
                 if message.author.name in self.authorised_users:
                     intent_class = self.Basic.get_class()

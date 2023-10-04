@@ -8,7 +8,7 @@ from Utilities.functions import *
 class Audio:
     def __init__(self):
         self.e = 0
-        self.model = whisper.load_model("tiny.en")
+        self.model = whisper.load_model("base.en")
         self.chunk = 1024
         self.sample_format = pyaudio.paInt16
         self.channels = 1
