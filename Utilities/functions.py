@@ -94,6 +94,8 @@ def DeployFunction(intent_class):
         set_timer()
     elif intent_class == "update-github":
         upload_to_github()
+    elif intent_class == "unlock-screen":
+        unlockPC()
 
 OS = check_os()
 # Website functions
@@ -189,9 +191,11 @@ def previous_music():
 
 def sleepPC():
     if OS == "Linux":
-        print("Running on Linux")
-        HostOS = "Linux"
         os.system("sleep 1; xset dpms force off")
+
+def unlockPC():
+    if OS == "Linux":
+        os.system("loginctl unlock-session")
 
 def mute():
     if OS == "Linux":

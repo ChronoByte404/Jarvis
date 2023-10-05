@@ -11,6 +11,7 @@ import torch
 import torch.nn as nn
 from Janex import *
 from Janex.word_manipulation import *
+from Janex.intentclassifier import *
 
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):

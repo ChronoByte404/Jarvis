@@ -155,6 +155,12 @@
       "patterns": ["Push to github.", "Commit changes to github", "Upload changes to github."],
       "responses": ["On it. Comitting and pushing changes now.", "Committing changes, give us a moment.", "On it, committing recent changes and uploading to Github.", "Sure thing, updating repo."],
       "context": "command"
+    },
+    {
+      "tag": "unlock-screen",
+      "patterns": ["Unlock screens", "Wake up screens", "Ding dong, daddy's home", "Unlock monitors", "Put up monitors"],
+      "responses": ["Monitors online.", "Unlocking screens..."],
+      "context": "command"
     }
   ]
 }
