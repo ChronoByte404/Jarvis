@@ -19,7 +19,7 @@ from AI.main import *
 
 # Interface
 
-config_data = loadconfig("AI/config.json")
+config_data = loadconfig("Settings/discord_key.json")
 
 Hologram = NeuralHologram()
 

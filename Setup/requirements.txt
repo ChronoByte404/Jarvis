@@ -1,0 +1,10 @@
+git+https://github.com/Cipher58/whisper.git
+JanexPT
+JanexBot
+JanexSC
+JanexNLG
+nextcord
+playsound
+pyttsx3
+pyaudio
+numpy
