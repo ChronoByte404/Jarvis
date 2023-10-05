@@ -81,9 +81,9 @@ def ChooseClient():
     elif "whisper" in ClientOption:
         whisper_function()
     elif "all" in ClientOption:
-#        Hologram.switch_to_blue()
+        background_alarm_clock()
+        Hologram.switch_to_blue()
         all_function()
 
 if __name__ == "__main__":
-    background_alarm_clock()
     ChooseClient()
