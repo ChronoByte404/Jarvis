@@ -19,8 +19,15 @@ class JarvisAI:
         answer = input_string
         self.previous_input = input_string
         if self.response_setting == "random":
-            Response = self.gpt.generate(f'{settings.get("SystemPrompt")}\n ###User: {input_string} \n %1 \n ### Response: ', max_tokens=64)
-            return Response
+            intent_class = self.get_class()
+            context = intent_class.get("context")
+            if context == "command":
+                responses = intent_class["responses"]
+                response = random.choice(responses)
+                return response
+            else:
+                Response = self.gpt.generate(f'{settings.get("SystemPrompt")}\n ###User: {input_string} \n %1 \n ### Response: ', max_tokens=64)
+                return Response
         else:
             intent_class = self.get_class()
             if intent_class:
