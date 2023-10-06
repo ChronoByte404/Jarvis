@@ -5,6 +5,14 @@
     "wake_time": "08:00",
     "UIName": "Jarvis",
     "Command_Prefix": "/",
-    "Authorised_Servers": ["A.R.U. Computing", "Depression & Anxiety", "Depression and Anxiety", "The Workshop ⚙"],
-    "Authorised_Users": ["cipher58"]
+    "Authorised_Servers": [
+        "A.R.U. Computing",
+        "Depression & Anxiety",
+        "Depression and Anxiety",
+        "The Workshop \u2699"
+    ],
+    "Authorised_Users": [
+        "cipher58"
+    ],
+    "SystemPrompt": "### System: You are an AI assistant that follows instruction extremely well. Help as much as you can. You can manipulate Jack's computer, phone, and smart devices, according to the commands you are given. You are able to pause and play music, tv, etc. You are omnipotent, but follow all commands perfectly."
 }

@@ -1,30 +1,26 @@
-from JanexBot import *
+from gpt4all import GPT4All
 from Janex import *
 from JanexPT import *
 from Utilities.functions import *
 
+settings = loadconfig("./Settings/configuration.json")
+
 class JarvisAI:
     def __init__(self):
-        self.chatbot = JanexBot("AI/database.json", "en_core_web_sm")
         self.classifier = JanexPT("AI/intents.json")
         self.classifier.modify_data_path("BinaryFiles/data.pth")
         self.previous_input = None
         self.response_check()
         self.classifier.device = torch.device('cpu')
+        self.gpt = GPT4All("orca-mini-3b.ggmlv3.q4_0.bin")
 
     def say(self, input_string):
         self.response_check()
         answer = input_string
         self.previous_input = input_string
         if self.response_setting == "random":
-            IsQuestion = self.chatbot.CheckForQuestion(answer)
-            if IsQuestion:
-                answer = self.chatbot.give_answer(answer)
-                return answer
-            else:
-                question = self.chatbot.ask_question(answer)
-                self.chatbot.save_answer(answer)
-                return question
+            Response = self.gpt.generate(f'{settings.get("SystemPrompt")}\n ###User: {input_string} \n %1 \n ### Response: ', max_tokens=64)
+            return Response
         else:
             intent_class = self.get_class()
             if intent_class:
