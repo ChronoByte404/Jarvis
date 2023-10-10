@@ -1,4 +1,3 @@
-from gpt4all import GPT4All
 from Janex import *
 from JanexPT import *
 from JanexBot import *
