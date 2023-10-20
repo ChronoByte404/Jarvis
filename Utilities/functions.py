@@ -110,21 +110,23 @@ def set_timer():
     threading.Thread(target=timer, args=(time_in_seconds,)).start()
 
 def background_alarm_clock():
-    test = 1
-    threading.Thread(target=alarm_clock, args=(test,)).start()
+    threading.Thread(target=reminders, args=()).start()
 
-def alarm_clock(test):
-    settings_config = loadconfig("./Settings/configuration.json")
-    wake_time = settings_config.get("wake_time")
+def reminders():
+    all_reminders = loadconfig("./Settings/reminders.json")
     E = 1
     while True:
         current_time = datetime.now().time()
         formatted_time = current_time.strftime("%H:%M")
-        if formatted_time == wake_time:
-            os.system(f"amixer -D pulse sset Master 50%")
-            tts("Good morning. It is eight AM.")
-            play_sound_in_background("./AudioFiles/alarm_clock.mp3")
-            time.sleep(60)
+        for reminder in all_reminders["reminders"]:
+            wake_time = reminder.get("time")
+            if formatted_time == wake_time:
+                os.system(f"amixer -D pulse sset Master 90%")
+                tts(reminder.get("tag"))
+                if reminder.get("type") == "alarm":
+                    play_sound_in_background("./AudioFiles/alarm_clock.mp3")
+                time.sleep(60)
+                os.system(f"amixer -D pulse sset Master 65%")
 
 def change_response_setting():
     settings_config = loadconfig("./Settings/configuration.json")
