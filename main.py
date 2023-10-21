@@ -4,6 +4,7 @@ from Utilities.libraries import *
 from Utilities.functions import *
 from Utilities.server import *
 from Utilities.hologram import *
+import sys
 
 # Interfaces
 
@@ -61,12 +62,12 @@ def all_function():
     threading.Thread(target=server_function, args=()).start()
     discord_function()
 
-def ChooseClient():
-    ClientOption = input("Client: ")
+def ChooseClient(ClientOption):
     ClientOption = str(ClientOption)
     Hologram.title = ClientOption.upper()
     if ClientOption.lower() != "basic":
         threading.Thread(target=Hologram.activate, args=()).start()
+        set_face("think")
 
     if "discord" in ClientOption:
         discord_function()
@@ -79,6 +80,13 @@ def ChooseClient():
     elif "all" in ClientOption:
         background_alarm_clock()
         all_function()
+    else:
+        print("Not a valid option.")
+        return 400
 
 if __name__ == "__main__":
-    ChooseClient()
+    if len(sys.argv) > 1:
+        ChooseClient(sys.argv[1])
+    else:
+        ClientOption = input("Client: ")
+        ChooseClient(ClientOption)

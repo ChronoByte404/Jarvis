@@ -21,15 +21,18 @@ class JarvisAI:
         self.response_check()
         answer = input_string
         self.previous_input = input_string
+        set_face("talk_happy")
         if self.response_setting == "random":
             intent_class = self.get_class()
             response = self.NLG.generate_sentence(input_string)
+            set_face("smile")
             return response
         else:
             intent_class = self.get_class()
             if intent_class:
                 responses = intent_class["responses"]
                 response = random.choice(responses)
+                set_face("smile")
                 return response
 
     def get_class(self):

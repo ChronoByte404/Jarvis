@@ -9,6 +9,11 @@ from datetime import datetime
 import time
 import psutil
 
+def set_face(face):
+    with open("./Short_Term_Memory/face.txt", "w") as f:
+        face = str(face)
+        f.write(face)
+
 # Internal functions
 def check_network_status():
     while True:
@@ -36,9 +41,11 @@ def play_sound_in_background(notification_sound_file):
     threading.Thread(target=play_notification_sound, args=(notification_sound_file,)).start()
 
 def DoFunction(intent_class):
+    set_face("think")
     threading.Thread(target=DeployFunction, args=(intent_class,)).start()
 
 def check_os():
+    set_face("think")
     if sys.platform.startswith('linux'):
         print(f"Linux-based Operating System Detected.")
         return "Linux"
@@ -247,8 +254,3 @@ def speak(ResponseOutput):
 
 def tts(ResponseOutput):
     threading.Thread(target=speak, args=(ResponseOutput,)).start()
-
-def set_face(face):
-    with open("./Short_Term_Memory/face.txt", "w") as f:
-        face = str(face)
-        f.write(face)

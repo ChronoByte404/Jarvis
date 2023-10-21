@@ -16,6 +16,7 @@ class DiscordBot:
 
         config_data = loadconfig("Settings/discord_key.json")
         settings = loadconfig("Settings/configuration.json")
+        self.settings = settings
 
         self.UIName = settings.get("UIName")
         self.Prefix = settings.get("Command_Prefix")
@@ -30,10 +31,20 @@ class DiscordBot:
         self.authorised_users = settings.get("Authorised_Users")
         self.ResponseOutput = ""
 
+        with open('./Settings/JURISDICTION.json', 'r+') as file:
+            data = json.load(file)
+            self.incoming_servers = data
+
     def activate_bot(self):
         @self.client.event
         async def on_message(message):
             if self.UIName in message.content or message.guild is None or message.reference and message.reference.resolved.author.bot:
+                await message.channel.trigger_typing()
+                if message.guild:
+                    self.UIName = str(message.guild.get_member(self.client.user.id).display_name)
+                else:
+                    self.UIName = settings.get("UIName")
+
                 self.message = message
                 self.user = message.author
                 sentence = str(message.content)
@@ -49,6 +60,13 @@ class DiscordBot:
                         DoFunction(intent_class)
             else:
                 pass
+        
+        async def on_member_join(member):
+            servername = str(member.guild)
+            if servername in self.incoming_servers:
+                channel_id = self.incoming_servers[servername]
+                channel = client.get_channel(channel_id)
+                await channel.send(f"Hello, {member.name}! Welcome to the {servername} server!")
 
         self.client.run(self.DiscordAPI)
 
