@@ -1,6 +1,8 @@
 from Janex import *
 from JanexPT import *
 from JanexBot import *
+from JanexNLG import *
+
 from Utilities.functions import *
 
 settings = loadconfig("./Settings/configuration.json")
@@ -13,6 +15,7 @@ class JarvisAI:
         self.previous_input = None
         self.response_check()
         self.classifier.device = torch.device('cpu')
+        self.NLG = NLG("en_core_web_md", "./BinaryFiles/janex.bin")
 
     def say(self, input_string):
         self.response_check()
@@ -20,8 +23,7 @@ class JarvisAI:
         self.previous_input = input_string
         if self.response_setting == "random":
             intent_class = self.get_class()
-            responses = intent_class["responses"]
-            response = random.choice(responses)
+            response = self.NLG.generate_sentence(input_string)
             return response
         else:
             intent_class = self.get_class()

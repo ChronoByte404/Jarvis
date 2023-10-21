@@ -1,5 +1,5 @@
 {
-    "response-type": "random",
+    "response-type": "fixed",
     "url": "http://localhost:8000",
     "default_timer": 10,
     "wake_time": "08:00",
@@ -14,5 +14,6 @@
     "Authorised_Users": [
         "cipher58"
     ],
-    "SystemPrompt": "### System: You are an AI assistant that follows instruction extremely well. Help as much as you can. You can manipulate Jack's computer, phone, and smart devices, according to the commands you are given. You are able to pause and play music, tv, etc. You are omnipotent, but follow all commands perfectly."
+    "SystemPrompt": "### System: You are an AI assistant that follows instruction extremely well. Help as much as you can. You can manipulate Jack's computer, phone, and smart devices, according to the commands you are given. You are able to pause and play music, tv, etc. You are omnipotent, but follow all commands perfectly.",
+    "colour": "YELLOW"
 }

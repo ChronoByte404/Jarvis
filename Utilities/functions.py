@@ -20,10 +20,10 @@ def check_network_status():
 def background_network():
     threading.Thread(target=check_network_status, args=()).start()
 
-def loadconfig(config_file_path):
-    with open(config_file_path, "r") as json_file:
+def loadconfig(file_path):
+    with open(file_path, 'r') as json_file:
         config_data = json.load(json_file)
-        return config_data
+    return config_data
 
 def saveconfig(file_path, dict):
     with open(file_path, 'w') as json_file:
@@ -96,6 +96,23 @@ def DeployFunction(intent_class):
         upload_to_github()
     elif intent_class == "unlock-screen":
         unlockPC()
+    
+    # Aesthetic shit idgaf
+    
+    elif intent_class == "blue":
+        settings = loadconfig("./Settings/configuration.json")
+        settings["colour"] = "BLUE"
+        saveconfig("./Settings/configuration.json", settings)
+
+    elif intent_class == "yellow":
+        settings = loadconfig("./Settings/configuration.json")
+        settings["colour"] = "YELLOW"
+        saveconfig("./Settings/configuration.json", settings)
+
+    elif intent_class == "red":
+        settings = loadconfig("./Settings/configuration.json")
+        settings["colour"] = "RED"
+        saveconfig("./Settings/configuration.json", settings)
 
 OS = check_os()
 # Website functions
@@ -222,8 +239,16 @@ def maxvol():
 engine = pyttsx3.init()
 
 def speak(ResponseOutput):
+    set_face("talk_happy")
     engine.say(ResponseOutput)
     engine.runAndWait()
+    time.sleep(1)
+    set_face("smile")
 
 def tts(ResponseOutput):
     threading.Thread(target=speak, args=(ResponseOutput,)).start()
+
+def set_face(face):
+    with open("./Short_Term_Memory/face.txt", "w") as f:
+        face = str(face)
+        f.write(face)

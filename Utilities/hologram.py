@@ -1,72 +1,72 @@
 import curses
 import time
-import random
-from colorama import init, Fore, Back, Style
+import json
+from colorama import init, Fore
 import os
-
-init(autoreset=True)
+from Utilities.functions import *
 
 class NeuralHologram:
     def __init__(self):
         self.title = ""
         self.ResponseOutput = ""
+        self.last_face = ""
+        self.last_colour = ""
 
-    def switch_to_blue(self):
-        curses.init_pair(1, curses.COLOR_BLUE, curses.COLOR_BLACK)
+    def check_face_change(self):
+        with open("./Short_Term_Memory/face.txt", "r") as f:
+            recent_expression = f.read()
 
-    def switch_to_yellow(self):
-        curses.init_pair(1, curses.COLOR_YELLOW, curses.COLOR_BLACK)
+        if self.last_face != recent_expression:
+            self.last_face = recent_expression
+            return True
+        else:
+            return False
+    
+    def check_colour_change(self):
+        settings = loadconfig("./Settings/configuration.json")
 
-    def display(self, stdscr):
-        # Clear screen
-        stdscr.clear()
+        colour = settings.get("colour")
 
-        # Set font and color
-        curses.curs_set(0)
-        curses.init_pair(1, curses.COLOR_YELLOW, curses.COLOR_BLACK)
-        stdscr.attron(curses.color_pair(1))
-        stdscr.attron(curses.A_BOLD)
+        if self.last_colour != colour:
+            self.last_colour = colour
+            return True
+        else:
+            return False
 
+    def display(self):
+        settings = loadconfig("./Settings/configuration.json")
 
-        # Loop to animate hologram
-        while True:
-            display = [    "         ▄▄███████▄▄",     "      ▄██▀░░░░░░░▀██▄",    "     ██░░░░░░░░░░░░░░░░░░██",    "   ▄██░░░░░░░░░░░░░░░░░░░░██▄",    "  ██░░░░░░░░░░░░░░░░░░░░░░░░██",    " ██░░░░░░░░░░░░░░░░░░░░░░░░░░██",    " ██░░░░░░░░░░░░░░░░░░░░░░░░░░██", f" ██░░░░░░░{self.title}░░░░░░░░░░░░░░░░██",    " ██░░░░░░░░░░░░░░░░░░░░░░░░░░██",    "  ██░░░░░░░░░░░░░░░░░░░░░░░██",    "   ▀██░░░░░░░░░░░░░░░░░░░██▀",    "     ▀██▄░░░░░░░░░░░░░░▄██▀",    "        ▀▀███████▀▀", f"  ▀▀█ {self.ResponseOutput} █▀▀"]
+        colour = settings.get("colour")
 
-            # Clear screen
-            stdscr.clear()
+        with open("./Utilities/face.json", "r") as f:
+            data = json.load(f)
+        
+        faces = data["faces"]
 
-            # Get size of terminal
-            max_y, max_x = stdscr.getmaxyx()
+        for face in faces:
+            display = face["face"]
+            tag = str(face.get("tag"))
 
-            # Calculate center of screen
-            center_x = int((max_x - len(display[0])) / 2)
-            center_y = int((max_y - len(display)) / 2)
+            if tag == self.last_face:
+                display_face = face["face"]
+                if colour == "YELLOW":
+                    for item in display_face:
+                        print(Fore.YELLOW + item)
+                elif colour == "RED":
+                    for item in display_face:
+                        print(Fore.RED + item)
+                elif colour == "BLUE":
+                    for item in display_face:
+                        print(Fore.BLUE + item)
 
-            # Display hologram
-            for i in range(len(display)):
-                stdscr.addstr(center_y+i, center_x, display[i], curses.color_pair(1))
-
-            # Randomly select characters to highlight
-            highlight_chars = random.sample(range(len(display[0])), len(display[0])//2)
-
-            # Highlight characters
-            for i in range(len(display)):
-                for j in range(len(display[i])):
-                    which = random.choice([1, 2])
-                    if which == 1:
-                        color = curses.COLOR_CYAN
-                        stdscr.addstr(center_y+i, center_x+j, display[i][j], curses.color_pair(color))
-                    else:
-                        stdscr.addstr(center_y+i, center_x+j, display[i][j], curses.color_pair(1))
-
-            # Refresh screen
-            stdscr.refresh()
-
-            # Sleep for a short time
-            time.sleep(0.1)
+                break
 
     def activate(self):
-        curses.wrapper(self.display)
+        while True:
+            if self.check_face_change() or self.check_colour_change():
+                os.system("clear")
+                self.display()
+            time.sleep(0.5)
 
 if __name__ == "__main__":
     Hologram = NeuralHologram()

@@ -161,6 +161,24 @@
       "patterns": ["Unlock screens", "Wake up screens", "Ding dong, daddy's home", "Unlock monitors", "Put up monitors"],
       "responses": ["Monitors online.", "Unlocking screens..."],
       "context": "command"
+    },
+    {
+      "tag": "blue",
+      "patterns": ["Change your colour to blue", "Colour blue"],
+      "responses": ["Okay, I am now blue!", "I have reconfigured the colour settings.", "Fine, I'm blue now."],
+      "context": "command"
+    },
+    {
+      "tag": "yellow",
+      "patterns": ["Change your colour to yellow", "Colour yellow"],
+      "responses": ["Okay, I am now yellow!", "I have reconfigured the colour settings to yellow.", "Fine, I'm yellow now."],
+      "context": "command"
+    },
+    {
+      "tag": "red",
+      "patterns": ["Change your colour to red", "Colour red"],
+      "responses": ["Okay, I am now red!", "I have reconfigured the colour settings to red.", "Fine, I'm red now."],
+      "context": "command"
     }
   ]
 }

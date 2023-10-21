@@ -43,19 +43,15 @@ def whisper_function():
     while True:
         try:
             VoiceInput.VoiceCommand()
-            Hologram.switch_to_blue()
             InputString = VoiceInput.speech()
             ResponseOutput = Bot.say(InputString)
             tts(ResponseOutput)
             print(ResponseOutput)
-            Hologram.ResponseOutput = ResponseOutput
-            Hologram.switch_to_yellow()
         except:
             print("No speech detected.")
             pass
 
 def server_function():
-#    Hologram.switch_to_blue()
     server_address = ('', 8000)
     httpd = HTTPServer(server_address, RequestHandler)
     print('8000')
@@ -82,7 +78,6 @@ def ChooseClient():
         whisper_function()
     elif "all" in ClientOption:
         background_alarm_clock()
-#        Hologram.switch_to_blue()
         all_function()
 
 if __name__ == "__main__":
