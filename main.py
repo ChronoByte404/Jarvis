@@ -60,6 +60,7 @@ def server_function():
 
 def all_function():
     threading.Thread(target=server_function, args=()).start()
+    threading.Thread(target=basic_function, args=()).start()
     discord_function()
 
 def ChooseClient(ClientOption):
