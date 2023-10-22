@@ -8,6 +8,9 @@ import threading
 from datetime import datetime
 import time
 import psutil
+from Interfaces.text_to_speech import *
+
+Voice = TTS()
 
 def set_face(face):
     with open("./Short_Term_Memory/face.txt", "w") as f:
@@ -103,9 +106,9 @@ def DeployFunction(intent_class):
         upload_to_github()
     elif intent_class == "unlock-screen":
         unlockPC()
-    
+
     # Aesthetic shit idgaf
-    
+
     elif intent_class == "blue":
         settings = loadconfig("./Settings/configuration.json")
         settings["colour"] = "BLUE"
@@ -247,6 +250,11 @@ engine = pyttsx3.init()
 
 def speak(ResponseOutput):
     set_face("talk_happy")
+#    if OS == "Linux":
+#        TTS.say(ResponseOutput)
+#        set_face("smile")
+#        return 0
+#    else:
     engine.say(ResponseOutput)
     engine.runAndWait()
     time.sleep(1)

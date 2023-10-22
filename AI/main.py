@@ -5,6 +5,8 @@ from JanexNLG import *
 
 from Utilities.functions import *
 
+map_location=torch.device('cpu')
+
 settings = loadconfig("./Settings/configuration.json")
 
 class JarvisAI:
@@ -14,8 +16,8 @@ class JarvisAI:
         self.classifier.modify_data_path("BinaryFiles/data.pth")
         self.previous_input = None
         self.response_check()
-        self.classifier.device = torch.device('cpu')
         self.NLG = NLG("en_core_web_md", "./BinaryFiles/janex.bin")
+        self.classifier.set_device('cpu')
 
     def say(self, input_string):
         self.response_check()
