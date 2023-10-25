@@ -38,7 +38,7 @@ class DiscordBot:
     def activate_bot(self):
         @self.client.event
         async def on_message(message):
-            if self.UIName in message.content or message.guild is None or message.reference and message.reference.resolved.author.bot:
+            if self.UIName in message.content or message.guild is None or message.reference and message.reference.resolved.author == self.client.user:
                 await message.channel.trigger_typing()
                 if message.guild:
                     self.UIName = str(message.guild.get_member(self.client.user.id).display_name)
