@@ -43,7 +43,7 @@ class DiscordBot:
                 if message.guild:
                     self.UIName = str(message.guild.get_member(self.client.user.id).display_name)
                 else:
-                    self.UIName = settings.get("UIName")
+                    self.UIName = self.settings.get("UIName")
 
                 self.message = message
                 self.user = message.author
