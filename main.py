@@ -53,6 +53,16 @@ def whisper_function():
 #            print("No speech detected.")
 #            pass
 
+def blink():
+    E = 1
+
+    while True:
+        random_number = random.randint(4, 10)
+        time.sleep(random_number)
+        set_face("blink")
+        time.sleep(0.5)
+        set_face("think")
+
 def server_function():
     server_address = ('', 8000)
     httpd = HTTPServer(server_address, RequestHandler)
@@ -69,6 +79,7 @@ def ChooseClient(ClientOption):
     Hologram.title = ClientOption.upper()
     if ClientOption.lower() != "basic":
         threading.Thread(target=Hologram.activate, args=()).start()
+        threading.Thread(target=blink, args=()).start()
         set_face("think")
 
     if "discord" in ClientOption:
