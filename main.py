@@ -42,15 +42,16 @@ def whisper_function():
     Bot = terminal_chat()
     VoiceInput = Audio()
     while True:
-        try:
+#        try:
             VoiceInput.VoiceCommand()
             InputString = VoiceInput.speech()
             ResponseOutput = Bot.say(InputString)
             tts(ResponseOutput)
             print(ResponseOutput)
-        except:
-            print("No speech detected.")
-            pass
+            tts(ResponseOutput)
+#        except:
+#            print("No speech detected.")
+#            pass
 
 def server_function():
     server_address = ('', 8000)
