@@ -29,11 +29,13 @@ class DiscordBot:
         self.Basic = Basic()
         self.authorised_servers = settings.get("Authorised_Servers")
         self.authorised_users = settings.get("Authorised_Users")
+        self.prefix = settings.get("Command_Prefix")
+
         self.ResponseOutput = ""
 
         with open('./Settings/JURISDICTION.json', 'r+') as file:
             data = json.load(file)
-            self.incoming_servers = data
+            self.incoming_servers = data['servers']
 
     def activate_bot(self):
         @self.client.event
@@ -58,9 +60,22 @@ class DiscordBot:
                     intent_class = self.Basic.get_class()
                     if intent_class:
                         DoFunction(intent_class)
-            else:
-                pass
-        
+
+            if self.prefix in message.content:
+                if "authorise" in message.content:
+                    if str(message.guild) not in self.incoming_servers:
+                        self.incoming_servers.append(str(message.guild))
+                        dict = {"servers": self.incoming_servers}
+                        with open('./Settings/JURISDICTION.json', "w") as file:
+                            json.dump(dict, file, indent=4)
+                        await message.reply(f"Server moderation for {message.guild} is now active.")
+                    else:
+                        self.incoming_servers = remove_from_list(str(message.guild), self.incoming_servers)
+                        dict = {"servers": self.incoming_servers}
+                        with open('./Settings/JURISDICTION.json', "w") as file:
+                            json.dump(dict, file, indent=4)
+                        await message.reply(f"Server moderation for {message.guild} is now deactivated.")
+
         async def on_member_join(member):
             servername = str(member.guild)
             if servername in self.incoming_servers:

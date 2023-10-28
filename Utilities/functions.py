@@ -12,6 +12,13 @@ from Interfaces.text_to_speech import *
 
 Voice = TTS()
 
+def remove_from_list(variable, list):
+    new_list = []
+    for item in list:
+        if item != variable:
+            new_list.append(item)
+    return new_list
+
 def check_settings():
     required_files = ["configuration.json", "discord_key.json", "JURISDICTION.json", "intents.json", "reminders.json"]
     for file in required_files:
