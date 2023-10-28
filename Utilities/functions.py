@@ -12,6 +12,15 @@ from Interfaces.text_to_speech import *
 
 Voice = TTS()
 
+def check_settings():
+    required_files = ["configuration.json", "discord_key.json", "JURISDICTION.json", "intents.json", "reminders.json"]
+    for file in required_files:
+        file_path = f"./Settings/{file}"
+        if os.path.exists(file_path) is False:
+            os.system(f"curl -o {file_path} https://raw.githubusercontent.com/Cipher58/Jarvis/main/Templates/{file}")
+        else:
+            print(f"{file_path} exists.")
+
 def set_face(face):
     with open("./Short_Term_Memory/face.txt", "w") as f:
         face = str(face)
