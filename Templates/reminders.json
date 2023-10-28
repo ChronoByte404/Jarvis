@@ -1,0 +1,12 @@
+{
+  "reminders": [
+    {
+      "tag": "Wake up",
+      "time": "08:00"
+    },
+    {
+      "tag": "Take medication",
+      "time": "08:10"
+    }
+  ]
+}
