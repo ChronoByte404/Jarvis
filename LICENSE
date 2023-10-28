@@ -1,4 +1,4 @@
-Free Lily License 1.0 - Created 30/06/2023
+Free Lily License 2.0 - Created 29/10/2023
 
 This license agreement ("Agreement") is a detailed and specific agreement that governs the usage and distribution of the software developed by the author ("Licensor"). Any individual or entity that obtains a copy of the software under this license is referred to as the "Licensee".
 
@@ -8,7 +8,8 @@ This license agreement ("Agreement") is a detailed and specific agreement that g
     c. The Licensee is permitted to sell the software, including any modified versions they create, on the condition that:
       i. The Licensee must make the source code of their modified material available upon request and/or demand.
       ii. If the modified code is redistributed, whether as open source or commercially, the Licensee must ensure that the source code is easily accessible to the recipients.
-    d. The Licensee is allowed to keep their modified source code private if it is not distributed as a product or service.
+    d. The Licensee is allowed to keep their modified source code private if it is not distributed as a product or service. (Unless these products or services are free.)
+    e. If parts of this code are copied or paraphrased into other unrelated programs/works, then these extracts must contain references to the original source code (citing, directing to and crediting the original).
 
     Source Code Provision:
     a. The Licensee agrees to provide the complete corresponding source code of the software to any third party that receives a copy of the software from the Licensee.
@@ -24,8 +25,8 @@ This license agreement ("Agreement") is a detailed and specific agreement that g
     Disclaimer of Warranty:
     THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. THE LICENSOR DISCLAIMS ANY WARRANTIES, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE LICENSOR SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE SOFTWARE.
 
-    Lily License 1.0:
-    This license agreement is specifically referred to as the "Lily License 1.0." The terms and conditions contained herein constitute the complete agreement between the Licensor and the Licensee, superseding all prior or contemporaneous negotiations, discussions, or agreements, whether written or oral, related to the subject matter of this Agreement.
+    Lily License 2.0:
+    This license agreement is specifically referred to as the "Lily License 2.0." The terms and conditions contained herein constitute the complete agreement between the Licensor and the Licensee, superseding all prior or contemporaneous negotiations, discussions, or agreements, whether written or oral, related to the subject matter of this Agreement.
 
 By obtaining, using, or distributing the software, the Licensee acknowledges and agrees to be bound by the terms and conditions of this Agreement.
 
