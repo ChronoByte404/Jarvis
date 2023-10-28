@@ -96,12 +96,19 @@ def ChooseClient(ClientOption):
         background_alarm_clock()
         all_function()
     else:
-        print("Not a valid option.")
-        return 400
+        tts("Not a valid option.")
+        set_face("frown")
+        time.sleep(2)
+        sys.exit()
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         ChooseClient(sys.argv[1])
     else:
-        ClientOption = input("Client: ")
-        ChooseClient(ClientOption)
+        e = 1
+        while True:
+            try:
+                ClientOption = input("Client: ")
+                ChooseClient(ClientOption)
+            except:
+                pass
