@@ -1,5 +1,7 @@
 config.json
 Settings/discord_key.json
-Settings/*
+./Settings/*.json
+Settings/*.json
+*.json
 BinaryFiles/janex.bin
 *.bin
