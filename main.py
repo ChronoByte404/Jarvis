@@ -103,12 +103,23 @@ def ChooseClient(ClientOption):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
-        ChooseClient(sys.argv[1])
+        while True:
+            try:
+                ChooseClient(sys.argv[1])
+            except:
+                set_face("frown")
+                Hologram.check_face_change()
+                tts("There is a fatal error.")
     else:
         e = 1
         while True:
             try:
                 ClientOption = input("Client: ")
-                ChooseClient(ClientOption)
+                try:
+                    ChooseClient(ClientOption)
+                except:
+                    set_face("frown")
+                    Hologram.check_face_change()
+                    tts("There is a fatal error.")
             except:
                 pass

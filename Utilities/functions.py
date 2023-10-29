@@ -8,9 +8,16 @@ import threading
 from datetime import datetime
 import time
 import psutil
+import signal
 from Interfaces.text_to_speech import *
 
 Voice = TTS()
+
+def shutdown_handler(signal, frame):
+    tts("My thread processes are stopping. I'm closing down.")
+    exit()
+
+signal.signal(signal.SIGINT, shutdown_handler)
 
 def remove_from_list(variable, list):
     new_list = []
