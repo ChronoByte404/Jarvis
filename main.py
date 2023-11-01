@@ -4,6 +4,7 @@ from Utilities.libraries import *
 from Utilities.functions import *
 from Utilities.server import *
 from Utilities.hologram import *
+
 import sys
 
 # Interfaces
@@ -13,6 +14,7 @@ from Interfaces.whisper_client import *
 from Interfaces.gui import *
 from Interfaces.basic import *
 from Interfaces.terminal import *
+from Interfaces.remote_client import *
 
 # AI Core
 
@@ -37,6 +39,14 @@ def basic_function():
     while True:
         input_string = input("You: ")
         ResponseOutput = Bot.say(input_string)
+        tts(ResponseOutput)
+        print(ResponseOutput)
+
+def remote_function():
+    bot = Remote()
+    while True:
+        input_string = input("You: ")
+        ResponseOutput = bot.say(input_string)
         tts(ResponseOutput)
         print(ResponseOutput)
 
@@ -94,6 +104,8 @@ def ChooseClient(ClientOption):
     elif "all" in ClientOption:
         background_alarm_clock()
         all_function()
+    elif "remote" in ClientOption:
+        remote_function()
     else:
         tts("Not a valid option.")
         set_face("frown")

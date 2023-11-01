@@ -2,10 +2,10 @@ import requests
 import json
 from Utilities.functions import *
 
-class Basic:
+class Remote:
     def __init__(self):
         settings = loadconfig("Settings/configuration.json")
-        self.url = settings.get("url")
+        self.url = "https://able-eel-noticeably.ngrok-free.app"
         self.intent_class = None
 
     def say(self, sentence):
@@ -24,6 +24,9 @@ class Basic:
                 ResponseOutput = response_data.get('response', '')
                 intent_class = response_data.get('intent_class', '')
                 self.intent_class = intent_class
+                if intent_class:
+                    DoFunction(intent_class)
+
                 return ResponseOutput
             else:
                 print(f"Error: Received status code {fullresponse.status_code}")
