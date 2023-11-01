@@ -5,7 +5,7 @@ from Utilities.functions import *
 class Basic:
     def __init__(self):
         settings = loadconfig("Settings/configuration.json")
-        self.url = settings.get("url")
+        self.url = "https://able-eel-noticeably.ngrok-free.app"
         self.intent_class = None
 
     def say(self, sentence):
