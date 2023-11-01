@@ -57,20 +57,28 @@ class DiscordBot:
                     if intent_class:
                         DoFunction(intent_class)
 
-            if self.prefix in message.content:
-                if "authorise" in message.content:
-                    if str(message.guild) not in self.incoming_servers:
-                        self.incoming_servers.append(str(message.guild))
-                        dict = {"servers": self.incoming_servers}
-                        with open('./Settings/JURISDICTION.json', "w") as file:
-                            json.dump(dict, file, indent=4)
-                        await message.reply(f"Server moderation for {message.guild} is now active.")
-                    else:
-                        self.incoming_servers = remove_from_list(str(message.guild), self.incoming_servers)
-                        dict = {"servers": self.incoming_servers}
-                        with open('./Settings/JURISDICTION.json', "w") as file:
-                            json.dump(dict, file, indent=4)
-                        await message.reply(f"Server moderation for {message.guild} is now deactivated.")
+            if message.author.guild_permissions.administrator:
+                if self.prefix in message.content:
+                    if "authorise" in message.content:
+                        if str(message.guild) not in self.incoming_servers:
+                            self.incoming_servers.append(str(message.guild))
+                            dict = {"servers": self.incoming_servers}
+                            with open('./Settings/JURISDICTION.json', "w") as file:
+                                json.dump(dict, file, indent=4)
+                            await message.reply(f"Server moderation for {message.guild} is now active.")
+                        else:
+                            self.incoming_servers = remove_from_list(str(message.guild), self.incoming_servers)
+                            dict = {"servers": self.incoming_servers}
+                            with open('./Settings/JURISDICTION.json', "w") as file:
+                                json.dump(dict, file, indent=4)
+                            await message.reply(f"Server moderation for {message.guild} is now deactivated.")
+                    if "prune" in message.content:
+                        if str(message.guild) not in self.incoming_servers:
+                            await message.reply(f"Hmm. The {message.guild} server either isn't compatible with my pruning command, or I am not authorised to moderate this server.")
+                        else:
+                            member = message.mentions[0]
+                            await member.ban()
+                            await message.reply(f"{member} has been pruned successfully and relocated into the void.")
 
         async def on_member_join(member):
             servername = str(member.guild)
@@ -78,6 +86,9 @@ class DiscordBot:
                 channel_id = self.incoming_servers[servername]
                 channel = client.get_channel(channel_id)
                 await channel.send(f"Hello, {member.name}! Welcome to the {servername} server!")
+
+            role = discord.utils.get(member.guild.roles, name='Member')
+            await member.add_roles(role)
 
         self.client.run(self.DiscordAPI)
 
