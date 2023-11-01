@@ -42,13 +42,6 @@ class DiscordBot:
         async def on_message(message):
             if self.UIName in message.content or message.guild is None or message.reference and message.reference.resolved.author == self.client.user:
                 await message.channel.trigger_typing()
-                if message.guild:
-                    try:
-                        self.UIName = str(message.guild.get_member(self.client.user.id).display_name)
-                    except:
-                        self.UIName = self.settings.get("UIName")
-                else:
-                    self.UIName = self.settings.get("UIName")
 
                 self.message = message
                 self.user = message.author

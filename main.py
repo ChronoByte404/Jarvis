@@ -74,15 +74,14 @@ def server_function():
 def all_function():
     threading.Thread(target=server_function, args=()).start()
     threading.Thread(target=basic_function, args=()).start()
-    discord_function()
 
 def ChooseClient(ClientOption):
     ClientOption = str(ClientOption)
     Hologram.title = ClientOption.upper()
-    if ClientOption.lower() != "basic":
-        threading.Thread(target=Hologram.activate, args=()).start()
-        threading.Thread(target=blink, args=()).start()
-        set_face("think")
+
+    threading.Thread(target=Hologram.activate, args=()).start()
+    threading.Thread(target=blink, args=()).start()
+    set_face("think")
 
     if "discord" in ClientOption:
         discord_function()
