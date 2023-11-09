@@ -16,7 +16,11 @@ import sys
 Voice = TTS()
 
 def shutdown_handler(signal, frame):
-    ShutdownSafely()
+    ShutdownIndicator = 1
+
+    while True:
+        ShutdownSafely()
+        sys.exit()
 
 signal.signal(signal.SIGINT, shutdown_handler)
 
