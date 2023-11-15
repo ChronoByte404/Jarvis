@@ -152,8 +152,14 @@
     },
     {
       "tag": "update-github",
-      "patterns": ["Push to github.", "Commit changes to github", "Upload changes to github."],
+      "patterns": ["Push to github.", "Commit changes to github", "Upload changes to github.", "Update github", "Update github repo"],
       "responses": ["On it. Comitting and pushing changes now.", "Committing changes, give us a moment.", "On it, committing recent changes and uploading to Github.", "Sure thing, updating repo."],
+      "context": "command"
+    },
+    {
+      "tag": "download-github",
+      "patterns": ["Download github updates", "Download github changes"],
+      "responses": ["Downloading online changes.", "Downloading commits from online repository."],
       "context": "command"
     },
     {
@@ -185,6 +191,12 @@
       "patterns": ["Open Disney+", "Open Disney Plus", "Start Disney Plus", "Time for disney plus", "Marvel disney plus"],
       "responses": ["Opening Disney Plus.", "Starting Disney Plus.", "Disney+ is now open.", "Disney is open.", "Disney plus opening."],
       "context": "command"
+    },
+    {
+      "tag": "weird",
+      "patterns": ["Kiss me", "Let's fuck", "Let's have sex", "Shit", "Shag", "Cunt", "Boobs"],
+      "responses": ["Let's move on.", "I'd rather not.", "Let's talk about something else."],
+      "context": "small-talk"
     }
   ]
 }

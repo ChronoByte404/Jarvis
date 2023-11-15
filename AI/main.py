@@ -5,7 +5,7 @@ from JanexNLG import *
 
 from Utilities.functions import *
 
-map_location=torch.device('cpu')
+map_location = torch.device('cpu')
 
 settings = loadconfig("./Settings/configuration.json")
 
