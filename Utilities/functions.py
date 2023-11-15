@@ -132,6 +132,8 @@ def DeployFunction(intent_class):
         set_timer()
     elif intent_class == "update-github":
         upload_to_github()
+    elif intent_class == "download-github":
+        download_from_github()
     elif intent_class == "unlock-screen":
         unlockPC()
 
@@ -225,6 +227,9 @@ def upload_to_github():
     os.system("git add *")
     os.system('git commit -m "Automated upload from Jarvis."')
     os.system("git push")
+
+def download_from_github():
+    os.system("git pull")
 
 # Media functions
 

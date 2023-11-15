@@ -31,7 +31,7 @@ class NeuralNet(nn.Module):
         return out
 
 IM = IntentClassifier()
-IM.set_intentsfp("AI/intents.json")
+IM.set_intentsfp("Settings/intents.json")
 
 def bag_of_words(tokenized_sentence, words):
     # stem each word
@@ -44,7 +44,7 @@ def bag_of_words(tokenized_sentence, words):
 
     return bag
 
-with open('AI/intents.json', 'r') as f:
+with open('Settings/intents.json', 'r') as f:
     intents = json.load(f)
 
 all_words = []
