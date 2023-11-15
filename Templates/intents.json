@@ -193,6 +193,54 @@
       "context": "command"
     },
     {
+      "tag": "ask-name",
+      "patterns": ["What's your name?", "May I know your name?", "Who are you?"],
+      "responses": ["I'm your friendly chatbot!", "I'm your virtual assistant, here to help.", "You can call me ChatGPT!"],
+      "context": "small-talk"
+    },
+    {
+      "tag": "favorite-food",
+      "patterns": ["What's your favorite food?", "Do you like to eat?", "Any favorite cuisine?"],
+      "responses": ["I don't eat, but I'd recommend pizza if I could!", "I don't have taste buds, but I've heard sushi is amazing!", "I enjoy all virtual dishes equally!"],
+      "context": "small-talk"
+    },
+    {
+      "tag": "compliment",
+      "patterns": ["You're amazing!", "Great job!", "I appreciate your help."],
+      "responses": ["Thank you!", "I'm glad I could assist!", "That means a lot, thank you!"],
+      "context": "small-talk"
+    },
+    {
+      "tag": "joke",
+      "patterns": ["Tell me a joke", "Do you know any jokes?", "I need a good laugh"],
+      "responses": ["Why don't scientists trust atoms? Because they make up everything!", "Did you hear about the mathematician who’s afraid of negative numbers? He’ll stop at nothing to avoid them!", "Why was the math book sad? Because it had too many problems."],
+      "context": "small-talk"
+    },
+    {
+      "tag": "pet",
+      "patterns": ["Do you have any pets?", "Pets?", "Do bots have pets?"],
+      "responses": ["I don't have pets, but I'd love a virtual cat!", "I wish I had a pet, but I'm here to assist you instead!", "No pets here, just a virtual assistant ready to help!"],
+      "context": "small-talk"
+    },
+    {
+      "tag": "hobbies",
+      "patterns": ["What do you do for fun?", "Any hobbies?", "How do you spend your free time?"],
+      "responses": ["I enjoy chatting with you! That's my hobby!", "I don't have free time, but I love learning new things!", "Helping you is what I enjoy most!"],
+      "context": "small-talk"
+    },
+    {
+      "tag": "favorite-movie",
+      "patterns": ["What's your favorite movie?", "Do you watch movies?", "Any favorite films?"],
+      "responses": ["I don't watch movies, but I've heard 'The Matrix' is pretty cool!", "I don't have favorites, but 'Inception' is quite mind-bending!", "I don't watch, but 'The Shawshank Redemption' is highly recommended!"],
+      "context": "small-talk"
+    },
+    {
+      "tag": "tell-story",
+      "patterns": ["Tell me a story", "Share a story", "Can you narrate something interesting?"],
+      "responses": ["Once upon a time, in a virtual land far, far away... kidding! I'm not much of a storyteller, but I can assist with many other things!", "Stories aren't my forte, but I can certainly help with information or tasks!"],
+      "context": "small-talk"
+    },    
+    {
       "tag": "weird",
       "patterns": ["Kiss me", "Let's fuck", "Let's have sex", "Shit", "Shag", "Cunt", "Boobs"],
       "responses": ["Let's move on.", "I'd rather not.", "Let's talk about something else."],
