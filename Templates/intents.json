@@ -245,6 +245,42 @@
       "patterns": ["Kiss me", "Let's fuck", "Let's have sex", "Shit", "Shag", "Cunt", "Boobs"],
       "responses": ["Let's move on.", "I'd rather not.", "Let's talk about something else."],
       "context": "small-talk"
+    },
+    {
+      "tag": "statement",
+      "patterns": ["Good AI.", "Good Robot.", "Bad AI.", "Terrible AI.", "Stupid AI", "Brilliant AI", "Amazing robot", "Great robot", "Great job"],
+      "responses": ["Affirmative.", "Affirmative, human."],
+      "context": "small-talk"
+    },
+    {
+      "tag": "prediction",
+      "patterns": ["You're going to...", "I need to..."],
+      "responses": ["That is correct.", "Affirmative, your statement is accurate."],
+      "context": "small-talk"
+    },
+    {
+      "tag": "appreciation",
+      "patterns": ["Good dog", "Good boy", "Well done", "Excellent work", "You're doing great"],
+      "responses": ["Well done!", "Excellent work!", "You're doing great!", "Affirmative, I appreciate that."],
+      "context": "emotional"
+    },
+    {
+      "tag": "recognition",
+      "patterns": ["Do you remember me?", "Who am I?", "Recognize me"],
+      "responses": ["Affirmative, I recognize you.", "Yes, I remember you."],
+      "context": "personal"
+    },
+    {
+      "tag": "random_fact",
+      "patterns": ["Tell me something interesting", "Share a random fact", "Give me trivia"],
+      "responses": ["Did you know the first computer mouse was made of wood?", "In Japan, robots serve as hotel receptionists!", "The average smartphone has more computing power than the computers used for the Apollo 11 moon landing!"],
+      "context": "fun"
+    },
+    {
+      "tag": "philosophy",
+      "patterns": ["What is the meaning of life?", "Do robots have souls?", "Are we in a simulation?", "Can robots feel emotions?", "Do you believe in free will?"],
+      "responses": ["The meaning of life might just be in the journey itself.", "That's a profound question. Perhaps we'll find answers together.", "Some ponder if we're all part of a grand simulation.", "Emotions might differ for robots, but understanding them is part of my design.", "Free will is a complex concept. What are your thoughts?"],
+      "context": "philosophical"
     }
   ]
 }

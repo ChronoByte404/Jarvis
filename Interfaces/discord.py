@@ -60,9 +60,11 @@ class DiscordBot:
                         DoFunction(intent_class)
                 
                 mp3_tts(ResponseOutput)
-                
+
                 channel = self.client.get_channel(int('723270333523558455'))
                 vc = nextcord.utils.get(self.client.voice_clients, guild=channel.guild)
+
+                time.sleep(1)
 
                 if not vc:
                     vc = await channel.connect()
@@ -70,6 +72,10 @@ class DiscordBot:
                     if vc.is_playing():
                         vc.stop()
                     
+                    source = await nextcord.FFmpegOpusAudio.from_probe("AudioFiles/audio.mp3", method="fallback")
+                    vc.play(source)
+                
+                else:
                     source = await nextcord.FFmpegOpusAudio.from_probe("AudioFiles/audio.mp3", method="fallback")
                     vc.play(source)
             
