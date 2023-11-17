@@ -89,7 +89,7 @@ def ChooseClient(ClientOption):
     ClientOption = str(ClientOption)
     Hologram.title = ClientOption.upper()
 
-    threading.Thread(target=Hologram.activate, args=()).start()
+#    threading.Thread(target=Hologram.activate, args=()).start()
     threading.Thread(target=blink, args=()).start()
     set_face("think")
 

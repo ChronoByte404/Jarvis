@@ -9,6 +9,8 @@ from Utilities.functions import *
 import nextcord
 from nextcord.ext import commands
 
+import asyncio
+
 class DiscordBot:
     def __init__(self, DiscordAPI):
         self.DiscordAPI = DiscordAPI
@@ -56,7 +58,21 @@ class DiscordBot:
                     intent_class = self.Basic.get_class()
                     if intent_class:
                         DoFunction(intent_class)
+                
+                mp3_tts(ResponseOutput)
+                
+                channel = self.client.get_channel(int('723270333523558455'))
+                vc = nextcord.utils.get(self.client.voice_clients, guild=channel.guild)
 
+                if not vc:
+                    vc = await channel.connect()
+
+                    if vc.is_playing():
+                        vc.stop()
+                    
+                    source = await nextcord.FFmpegOpusAudio.from_probe("AudioFiles/audio.mp3", method="fallback")
+                    vc.play(source)
+            
             if message.author.guild_permissions.administrator:
                 if self.prefix in message.content:
                     if "authorise" in message.content:

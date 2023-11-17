@@ -293,5 +293,12 @@ def speak(ResponseOutput):
     time.sleep(1)
     set_face("smile")
 
+def save_speak(ResponseOutput):
+    engine.save_to_file(ResponseOutput, './AudioFiles/audio.mp3')
+    engine.runAndWait()
+
 def tts(ResponseOutput):
     threading.Thread(target=speak, args=(ResponseOutput,)).start()
+
+def mp3_tts(ResponseOutput):
+    threading.Thread(target=save_speak, args=(ResponseOutput,)).start()
