@@ -32,6 +32,8 @@ class DiscordBot:
         self.authorised_servers = settings.get("Authorised_Servers")
         self.authorised_users = settings.get("Authorised_Users")
         self.prefix = settings.get("Command_Prefix")
+        self.disallowed_words = settings.get("disallowed-words")
+        self.warning_message = settings.get("warning")
 
         self.ResponseOutput = ""
 
@@ -42,6 +44,16 @@ class DiscordBot:
     def activate_bot(self):
         @self.client.event
         async def on_message(message):
+            if str(message.guild) in self.incoming_servers:
+                sentence_words = str(message.content)
+                for word in self.disallowed_words:
+                    if word in sentence_words:
+                        await message.delete()
+                        response = await message.channel.send(self.warning_message)
+                        time.sleep(4)
+                        await response.delete()
+                        break
+            
             if self.UIName in message.content or message.guild is None or message.reference and message.reference.resolved.author == self.client.user:
                 await message.channel.trigger_typing()
 
@@ -78,7 +90,7 @@ class DiscordBot:
                 else:
                     source = await nextcord.FFmpegOpusAudio.from_probe("AudioFiles/audio.mp3", method="fallback")
                     vc.play(source)
-            
+
             if message.author.guild_permissions.administrator:
                 if self.prefix in message.content:
                     if "authorise" in message.content:

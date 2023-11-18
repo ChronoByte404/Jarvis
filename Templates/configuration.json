@@ -12,5 +12,6 @@
     "Authorised_Users": [
         "cipher58"
     ],
-    "colour": "YELLOW"
+    "colour": "YELLOW",
+    "disallowed-words": []
 }
