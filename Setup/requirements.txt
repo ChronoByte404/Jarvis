@@ -4,7 +4,6 @@ JanexBot
 JanexSC
 JanexNLG
 nextcord
-playsound
 pyttsx3
 pyaudio
 numpy

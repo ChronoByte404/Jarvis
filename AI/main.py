@@ -15,10 +15,13 @@ class JarvisAI:
         self.classifier.modify_data_path("BinaryFiles/data.pth")
         self.previous_input = None
         self.response_check()
-        self.NLG = NLG("en_core_web_md", "./BinaryFiles/janex.bin")
+        if self.response_setting == "random":
+            self.NLG = NLG("en_core_web_md", "./BinaryFiles/janex.bin")
         self.classifier.set_device('cpu')
 
     def say(self, input_string):
+        if self.response_setting == "random":
+            self.NLG = NLG("en_core_web_md", "./BinaryFiles/janex.bin")
         self.response_check()
         answer = input_string
         self.previous_input = input_string
