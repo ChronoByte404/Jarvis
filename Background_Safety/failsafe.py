@@ -1,5 +1,6 @@
 import sys
 import os
+from Background_Safety.cryptography import *
 
 def check_settings():
     required_files = ["configuration.json", "discord_key.json", "JURISDICTION.json", "intents.json", "reminders.json"]
@@ -32,6 +33,14 @@ def ShutdownSafely():
         print(item)
     print("💾 My thread processes are stopping. I'm closing down.")
     print("💾 A fatal internal error has occurred and this program will now shut down to prevent damage.")
+    process_directory('./Settings/', 'encrypt')
     sys.exit()
+
+def StartSafely():
+    try:
+        process_directory('./Settings/', 'decrypt')
+    except:
+        pass
+    check_settings()
 
 print("Backend protection online.")

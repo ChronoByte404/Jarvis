@@ -1,6 +1,6 @@
 from Background_Safety.failsafe import *
 
-check_settings()
+StartSafely()
 
 # Utilities
 
