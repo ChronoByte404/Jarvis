@@ -1,3 +1,7 @@
+from Background_Safety.failsafe import *
+
+check_settings()
+
 # Utilities
 
 from Utilities.libraries import *
