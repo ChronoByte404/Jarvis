@@ -11,5 +11,4 @@ playsound
 psutil
 colorama
 scipy
-pyaudio
 numpy
