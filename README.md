@@ -34,12 +34,11 @@ source VE/MacEnv/bin/activate
 ```
 
 If you do not see your OS-supported Virtual Environment, you either use Windows or you can create a virtual environment using venv.
+
 ```bash
 python3 -m venv VE/(name)
 
 source VE/(name)/bin/activate
-
-python3 -m pip install -r Setup/requirements.txt
 ```
 
 Due to storage limitations on Github, these virtual environments do not have the dependencies pre-installed. So after activating your Virtual Environment, you can install the dependencies in one go using this command.
