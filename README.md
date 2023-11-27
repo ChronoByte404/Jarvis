@@ -16,7 +16,12 @@ cd Jarvis
 
 To ensure that your version of Jarvis is in-sync with my version on a fundamental level, I would recommend activating one of the built-in virtual environments.
 
-### Linux
+### Ubuntu
+```
+source VE/Ubuntu/bin/activate
+```
+
+### Ubuntu-derived Linux
 
 ```bash
 source VE/LinuxEnv/bin/activate
@@ -26,6 +31,15 @@ source VE/LinuxEnv/bin/activate
 
 ```bash
 source VE/MacEnv/bin/activate
+```
+
+If you do not see your OS-supported Virtual Environment, you either use Windows or you can create a virtual environment using venv.
+```
+python3 -m venv VE/(name)
+
+source VE/(name)/bin/activate
+
+python3 -m pip install -r Setup/requirements.txt
 ```
 
 Due to storage limitations on Github, these virtual environments do not have the dependencies pre-installed. So after activating your Virtual Environment, you can install the dependencies in one go using this command.
