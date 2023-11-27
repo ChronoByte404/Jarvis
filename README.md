@@ -34,7 +34,7 @@ source VE/MacEnv/bin/activate
 ```
 
 If you do not see your OS-supported Virtual Environment, you either use Windows or you can create a virtual environment using venv.
-```
+```bash
 python3 -m venv VE/(name)
 
 source VE/(name)/bin/activate
