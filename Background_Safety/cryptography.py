@@ -17,7 +17,7 @@ def encrypt_json_file(file_path):
         data = json.load(file)
     encrypted_data = encrypt_to_numbers(data)
     with open(file_path, 'w') as file:
-        json.dump(encrypted_data, file)
+        json.dump(encrypted_data, file, indent=50)
 
 # Function to decrypt a JSON file
 def decrypt_json_file(file_path):
@@ -25,7 +25,7 @@ def decrypt_json_file(file_path):
         encrypted_data = json.load(file)
     decrypted_data = decrypt_from_numbers(encrypted_data)
     with open(file_path, 'w') as file:
-        json.dump(decrypted_data, file)
+        json.dump(decrypted_data, file, indent=4)
 
 # Function to walk through directories and encrypt/decrypt JSON files
 def process_directory(root_dir, operation):
